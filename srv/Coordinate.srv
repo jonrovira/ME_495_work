@@ -1,0 +1,7 @@
+string node
+int64 status_request
+int64 status_set
+int64 status_setting
+---
+int64 available
+int64 successful

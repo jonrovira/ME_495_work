@@ -1,0 +1,27 @@
+<launch>
+
+	<node
+		pkg="jon_baxter"
+		type="pick_place_coordinator.py"
+		name="coordinator"
+	/>
+
+	<node
+		pkg="jon_baxter"
+		type="pick_place_vision.py"
+		name="vision"
+	/>
+
+	<node
+		pkg="jon_baxter"
+		type="pick_place_mover.py"
+		name="mover"
+	/>
+
+	<node
+		pkg="jon_baxter"
+		type="pick_place_controller.py"
+		name="pick_place_controller"
+	/>
+
+</launch>
