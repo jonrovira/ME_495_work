@@ -1,0 +1,13 @@
+baxter_hardware.launch
+
+	baxter_hardware_interface.cpp
+	controller_manager.cpp
+	baxter_configure.launch
+
+		xdisplay_image.py
+		baxter_gripper_server.launch
+
+			gripper_action_server.cpp
+			baxter_state_publisher.launch
+			
+				baxter_state_publisher.cpp

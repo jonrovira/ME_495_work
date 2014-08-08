@@ -19,7 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
 # Based on answers.ros.org/question/56686/opencv-cmake-error/ :
 # Opencv2 not a ROS package, so gotta do this below
 # Also might need to target_link_libraries
-find_package(OpenCV REQUIRED)
+# find_package(OpenCV REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
