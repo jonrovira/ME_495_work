@@ -16,11 +16,6 @@ find_package(catkin REQUIRED COMPONENTS
   moveit_msgs
 )
 
-# Based on answers.ros.org/question/56686/opencv-cmake-error/ :
-# Opencv2 not a ROS package, so gotta do this below
-# Also might need to target_link_libraries
-# find_package(OpenCV REQUIRED)
-
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -29,6 +24,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
 # catkin_python_setup()
+
+add_executable(vrep_test src/vrep_test.cpp)
+target_link_libraries(vrep_test ${catkin_LIBRARIES})
 
 ################################################
 ## Declare ROS messages, services and actions ##
