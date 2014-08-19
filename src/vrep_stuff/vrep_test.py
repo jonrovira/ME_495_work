@@ -14,7 +14,7 @@ class Vrep_Test(object):
 
 	def __init__(self):
 		# Global initialization
-		self.node_name = "vrep_test"
+		self.node_name          = "vrep_test"
 		self.simulation_running = True
 		self.sensor_trigger     = False
 		self.simulation_time    = 0.0
