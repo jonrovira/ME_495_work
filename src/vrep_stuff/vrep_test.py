@@ -60,11 +60,11 @@ class Vrep_Test(object):
 			rospy.wait_for_service('/vrep/simRosEnableSubscriber')
 			enable_subscriber_req = rospy.ServiceProxy('/vrep/simRosEnableSubscriber', simRosEnableSubscriber)
 			resp = enable_subscriber_req("/"+self.node_name+"/wheels", # topicName
-				                         1,                       # queueSize
-				                         0x000803,                # streamCmd
-				                         -1,                      # auxInt1
-				                         -1,                      # auxInt2
-				                         "")                      # auxString
+				                         1,                            # queueSize
+				                         0x000803,                     # streamCmd
+				                         -1,                           # auxInt1
+				                         -1,                           # auxInt2
+				                         "")                           # auxString
 
 			# Motor speed topic subscription request successful
 			if resp.subscriberID is not -1:
