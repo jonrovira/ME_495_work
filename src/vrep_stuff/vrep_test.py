@@ -44,7 +44,7 @@ class Vrep_Test(object):
 		enable_publisher_req = rospy.ServiceProxy('/vrep/simRosEnablePublisher', simRosEnablePublisher)
 		resp = enable_publisher_req('proxData',         # topicName
 			                        1,                  # queueSize
-			                        0x001010,            # streamCmd
+			                        0x001010,           # streamCmd
 			                        int(sensor_handle), # auxInt1
 			                        -1,                 # auxInt2
 			                        "")                 # auxString

@@ -20,7 +20,6 @@ class Vrep_Baxter_Test(object):
 	def _vrep_info_callback(self, data):
 		# /vrep/info subscription callback
 		self.simulation_running = int(data.simulatorState.data) != 0
-		print "new simulation running state: " + str(self.simulation_running)
 
 
 	def test(self, l_arm, r_arm):
@@ -29,6 +28,7 @@ class Vrep_Baxter_Test(object):
 
 		while self.simulation_running:
 			rospy.sleep(1.0)
+			print "HI"
 
 
 
@@ -40,7 +40,6 @@ def main():
 	# Launch Vrep Baxter Test
 	vbt = Vrep_Baxter_Test()
 	vbt.test(l_arm, r_arm)
-
 
 
 
