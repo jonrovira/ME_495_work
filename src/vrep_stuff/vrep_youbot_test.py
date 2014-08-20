@@ -46,7 +46,7 @@ class Vrep_Youbot_Test(object):
 	        if timeout >= 0:
 	            [rlist, _, _] = select(rlist, [], [], timeout)
 	        if fileno in rlist:
-	            ch = sys.stdin.read(3)
+	            ch = sys.stdin.read(1)
 	    except Exception as ex:
 	        print "getch", ex
 	        raise OSError
@@ -55,25 +55,25 @@ class Vrep_Youbot_Test(object):
 	    return ch
 
 
-	def test(self, wheel_fl, wheel_fr, wheel_rl, wheel_rr):
+	def test(self, wheel_fl, wheel_fr, wheel_rl, wheel_rr, arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4):
 		# Subscribe to v-rep's info stream
 		rospy.Subscriber('/vrep/info', VrepInfo, self._vrep_info_callback)
 
 		# Tell v-rep to subscribe to wheel speed topic
 		rospy.wait_for_service('/vrep/simRosEnableSubscriber')
 		enable_subscriber_req = rospy.ServiceProxy('/vrep/simRosEnableSubscriber', simRosEnableSubscriber)
-		resp = enable_subscriber_req("/"+self.node_name+"/wheels", # topicName
-			                         1,                            # queueSize
-			                         0x000803,                     # streamCmd
-			                         -1,                           # auxInt1
-			                         -1,                           # auxInt2
-			                         "")                           # auxString
+		resp = enable_subscriber_req("/"+self.node_name+"/joint_state", # topicName
+			                         1,                                 # queueSize
+			                         0x000803,                          # streamCmd
+			                         -1,                                # auxInt1
+			                         -1,                                # auxInt2
+			                         "")                                # auxString
 
-		# Wheel speed topic subscription request successful
+		# Joint state subscription request successful
 		if resp.subscriberID is not -1:
 
-			# Create wheel speed publisher
-			wheel_pub = rospy.Publisher('/'+self.node_name+'/wheels', JointSetStateData)
+			# Create joint state publisher
+			joint_state_pub = rospy.Publisher('/'+self.node_name+'/joint_state', JointSetStateData)
 
 			# Create control loop
 			while not rospy.is_shutdown() and self.simulation_running:
@@ -82,53 +82,66 @@ class Vrep_Youbot_Test(object):
 				cmd = self.getch()
 				if cmd:
 
-					if cmd in ['\x1b[A','\x1b[B','\x1b[C','\x1b[D']:
+					# Wheel command
+					if cmd in ['w','s','d','a']:
 
+						# Initialize variables to avoid scope problems
 						front_left_speed = front_right_speed = rear_left_speed = rear_right_speed = None
 
 						# Up = move forward
-						if cmd == '\x1b[A':
+						if cmd == 'w':
 							front_left_speed  = 3.1415
 							front_right_speed = 3.1415
 							rear_left_speed   = 3.1415
 							rear_right_speed  = 3.1415
 
 						# Down = move backward
-						elif cmd == '\x1b[B':
+						elif cmd == 's':
 							front_left_speed  = -3.1415
 							front_right_speed = -3.1415
 							rear_left_speed   = -3.1415
 							rear_right_speed  = -3.1415	
 
 						# Right = move right
-						elif cmd == '\x1b[C':
+						elif cmd == 'd':
 							front_left_speed  = 3.1415
 							front_right_speed = -3.1415
 							rear_left_speed   = -3.1415
 							rear_right_speed  = 3.1415
 
 						# Left = move left
-						elif cmd == '\x1b[D':
+						elif cmd == 'a':
 							front_left_speed  = -3.1415
 							front_right_speed = 3.1415
 							rear_left_speed   = 3.1415
 							rear_right_speed  = -3.1415
 
-						wheel_speeds = JointSetStateData()
-						wheel_speeds.handles.data.append(wheel_fl)
-						wheel_speeds.handles.data.append(wheel_fr)
-						wheel_speeds.handles.data.append(wheel_rl)
-						wheel_speeds.handles.data.append(wheel_rr)
-						wheel_speeds.setModes.data = [2,2,2,2]
-						wheel_speeds.values.data.append(front_left_speed)
-						wheel_speeds.values.data.append(front_right_speed)
-						wheel_speeds.values.data.append(rear_left_speed)
-						wheel_speeds.values.data.append(rear_right_speed)
+						# Create ROS JointSetStateData message with appropriate data
+						joint_state = JointSetStateData()
+						joint_state.handles.data  = [wheel_fl, wheel_fr, wheel_rl, wheel_rr]
+						joint_state.setModes.data = [2, 2, 2, 2]
+						joint_state.values.data   = [front_left_speed, front_right_speed, rear_left_speed, rear_right_speed]
 
-						wheel_pub.publish(wheel_speeds)
+						# Publish control message
+						joint_state_pub.publish(joint_state)
 						rospy.sleep(0.1)
-						wheel_speeds.values.data = [0,0,0,0]
-						wheel_pub.publish(wheel_speeds)
+
+						# Publish 0 velocity control to stop motion
+						joint_state.values.data = [0,0,0,0]
+						joint_state_pub.publish(joint_state)
+
+					# Arm command
+					elif cmd in ['l']:
+
+						joint_state = JointSetStateData()
+						joint_state.handles.data  = [arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4]
+						joint_state.setModes.data = [0, 0, 0, 0]
+						joint_state.values.data   = [0, 0, 0, 0,]
+
+						joint_state_pub.publish(joint_state)
+						rospy.sleep(0.5)
+
+
 
 		# Request wasn't successful
 		else: print "Unsuccessful wheel speed topic subscription request"
@@ -136,15 +149,19 @@ class Vrep_Youbot_Test(object):
 
 
 def main():
-	# Get arm handles
-	wheel_fl = int(sys.argv[1])
-	wheel_fr = int(sys.argv[2])
-	wheel_rl = int(sys.argv[3])
-	wheel_rr = int(sys.argv[4])
+	# Get Youbot handles
+	wheel_fl    = int(sys.argv[1])
+	wheel_fr    = int(sys.argv[2])
+	wheel_rl    = int(sys.argv[3])
+	wheel_rr    = int(sys.argv[4])
+	arm_joint_1 = int(sys.argv[5])
+	arm_joint_2 = int(sys.argv[6])
+	arm_joint_3 = int(sys.argv[7])
+	arm_joint_4 = int(sys.argv[8])
 
 	# Launch Vrep Baxter Test
 	vbt = Vrep_Youbot_Test()
-	vbt.test(wheel_fl, wheel_fr, wheel_rl, wheel_rr)
+	vbt.test(wheel_fl, wheel_fr, wheel_rl, wheel_rr, arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4)
 
 
 
