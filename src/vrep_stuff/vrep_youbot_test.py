@@ -91,7 +91,7 @@ class Vrep_Youbot_Test(object):
 				joint_state = JointSetStateData()
 				joint_state.handles.data  = joints
 				joint_state.setModes.data = len(joints) * [0]
-				joint_state.values.data   = [(current_angles[x] + (directions[x] * 0.03)) for x in range(len(directions))]
+				joint_state.values.data   = [(current_angles[x] + (directions[x] * 0.06)) for x in range(len(directions))]
 				self.joint_state_pub.publish(joint_state)
 
 			bindings = {
