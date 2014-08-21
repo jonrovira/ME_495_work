@@ -7,7 +7,8 @@ from select import select
 import rospy
 from vrep_common.msg import ( VrepInfo,
                               JointSetStateData )
-from vrep_common.srv import ( simRosEnableSubscriber )
+from vrep_common.srv import ( simRosEnableSubscriber,
+                              simRosGetJointState )
 
 
 class Vrep_Youbot_Test(object):
@@ -19,6 +20,9 @@ class Vrep_Youbot_Test(object):
 
 		# Initiailize ROS node
 		rospy.init_node(self.node_name)
+		rospy.wait_for_service('/vrep/simRosEnableSubscriber')
+		rospy.wait_for_service('/vrep/simRosGetJointState')
+		self.joint_state_req = rospy.ServiceProxy('/vrep/simRosGetJointState', simRosGetJointState)
 		print "\n" + self.node_name + " node started"
 
 
@@ -60,7 +64,6 @@ class Vrep_Youbot_Test(object):
 		rospy.Subscriber('/vrep/info', VrepInfo, self._vrep_info_callback)
 
 		# Tell v-rep to subscribe to wheel speed topic
-		rospy.wait_for_service('/vrep/simRosEnableSubscriber')
 		enable_subscriber_req = rospy.ServiceProxy('/vrep/simRosEnableSubscriber', simRosEnableSubscriber)
 		resp = enable_subscriber_req("/"+self.node_name+"/joint_state", # topicName
 			                         1,                                 # queueSize
@@ -82,11 +85,13 @@ class Vrep_Youbot_Test(object):
 				joint_state.values.data = len(wheels) * [0]
 				self.joint_state_pub.publish(joint_state)
 
-			def set_joints(joints, angles):
+			def set_joints(joints, directions):
+				current_angles = []
+				current_angles = [self.joint_state_req(joints[x]).state.position[0] for x in range(len(joints))]
 				joint_state = JointSetStateData()
 				joint_state.handles.data  = joints
 				joint_state.setModes.data = len(joints) * [0]
-				joint_state.values.data   = angles
+				joint_state.values.data   = [(current_angles[x] + (directions[x] * 0.03)) for x in range(len(directions))]
 				self.joint_state_pub.publish(joint_state)
 
 			bindings = {
@@ -94,7 +99,14 @@ class Vrep_Youbot_Test(object):
 				's': (set_wheels, [wheel_fl, wheel_fr, wheel_rl, wheel_rr], [-1, -1, -1, -1]),
 				'd': (set_wheels, [wheel_fl, wheel_fr, wheel_rl, wheel_rr], [ 1, -1, -1,  1]),
 				'a': (set_wheels, [wheel_fl, wheel_fr, wheel_rl, wheel_rr], [-1,  1,  1, -1]),
-				'l': (set_joints, [arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4], [0, 0, 0, 0])
+				'n': (set_joints, [arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4], [ 1,  0,  0,  0]),
+				'm': (set_joints, [arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4], [-1,  0,  0,  0]),
+				'j': (set_joints, [arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4], [ 0,  1,  0,  0]),
+				'k': (set_joints, [arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4], [ 0, -1,  0,  0]),
+				'i': (set_joints, [arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4], [ 0,  0,  1,  0]),
+				'o': (set_joints, [arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4], [ 0,  0, -1,  0]),
+				'9': (set_joints, [arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4], [ 0,  0,  0,  1]),
+				'0': (set_joints, [arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4], [ 0,  0,  0, -1]),
 			}
 
 			while not rospy.is_shutdown() and self.simulation_running:
