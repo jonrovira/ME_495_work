@@ -69,81 +69,48 @@ class Vrep_Youbot_Test(object):
 			                         -1,                                # auxInt2
 			                         "")                                # auxString
 
-		# Joint state subscription request successful
 		if resp.subscriberID is not -1:
+			self.joint_state_pub = rospy.Publisher('/'+self.node_name+'/joint_state', JointSetStateData)
 
-			# Create joint state publisher
-			joint_state_pub = rospy.Publisher('/'+self.node_name+'/joint_state', JointSetStateData)
+			def set_wheels(wheels, directions):
+				joint_state = JointSetStateData()
+				joint_state.handles.data  = wheels
+				joint_state.setModes.data = len(wheels) * [2]
+				joint_state.values.data   = [directions[x] * 3.1415 for x in range(len(wheels))]
+				self.joint_state_pub.publish(joint_state)
+				rospy.sleep(0.1)
+				joint_state.values.data = len(wheels) * [0]
+				self.joint_state_pub.publish(joint_state)
 
-			# Create control loop
+			def set_joints(joints, angles):
+				joint_state = JointSetStateData()
+				joint_state.handles.data  = joints
+				joint_state.setModes.data = len(joints) * [0]
+				joint_state.values.data   = angles
+				self.joint_state_pub.publish(joint_state)
+
+			bindings = {
+				'w': (set_wheels, [wheel_fl, wheel_fr, wheel_rl, wheel_rr], [ 1,  1,  1,  1]),
+				's': (set_wheels, [wheel_fl, wheel_fr, wheel_rl, wheel_rr], [-1, -1, -1, -1]),
+				'd': (set_wheels, [wheel_fl, wheel_fr, wheel_rl, wheel_rr], [ 1, -1, -1,  1]),
+				'a': (set_wheels, [wheel_fl, wheel_fr, wheel_rl, wheel_rr], [-1,  1,  1, -1]),
+				'l': (set_joints, [arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4], [0, 0, 0, 0])
+			}
+
 			while not rospy.is_shutdown() and self.simulation_running:
-				
-				# Get command from user
-				cmd = self.getch()
-				if cmd:
-
-					# Wheel command
-					if cmd in ['w','s','d','a']:
-
-						# Initialize variables to avoid scope problems
-						front_left_speed = front_right_speed = rear_left_speed = rear_right_speed = None
-
-						# Up = move forward
-						if cmd == 'w':
-							front_left_speed  = 3.1415
-							front_right_speed = 3.1415
-							rear_left_speed   = 3.1415
-							rear_right_speed  = 3.1415
-
-						# Down = move backward
-						elif cmd == 's':
-							front_left_speed  = -3.1415
-							front_right_speed = -3.1415
-							rear_left_speed   = -3.1415
-							rear_right_speed  = -3.1415	
-
-						# Right = move right
-						elif cmd == 'd':
-							front_left_speed  = 3.1415
-							front_right_speed = -3.1415
-							rear_left_speed   = -3.1415
-							rear_right_speed  = 3.1415
-
-						# Left = move left
-						elif cmd == 'a':
-							front_left_speed  = -3.1415
-							front_right_speed = 3.1415
-							rear_left_speed   = 3.1415
-							rear_right_speed  = -3.1415
-
-						# Create ROS JointSetStateData message with appropriate data
-						joint_state = JointSetStateData()
-						joint_state.handles.data  = [wheel_fl, wheel_fr, wheel_rl, wheel_rr]
-						joint_state.setModes.data = [2, 2, 2, 2]
-						joint_state.values.data   = [front_left_speed, front_right_speed, rear_left_speed, rear_right_speed]
-
-						# Publish control message
-						joint_state_pub.publish(joint_state)
-						rospy.sleep(0.1)
-
-						# Publish 0 velocity control to stop motion
-						joint_state.values.data = [0,0,0,0]
-						joint_state_pub.publish(joint_state)
-
-					# Arm command
-					elif cmd in ['l']:
-
-						joint_state = JointSetStateData()
-						joint_state.handles.data  = [arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4]
-						joint_state.setModes.data = [0, 0, 0, 0]
-						joint_state.values.data   = [0, 0, 0, 0,]
-
-						joint_state_pub.publish(joint_state)
-						rospy.sleep(0.5)
+				c = self.getch()
+				if c:
+					if c in bindings:
+						cmd = bindings[c]
+						cmd[0](cmd[1], cmd[2])
+					else:
+						print("key bindings: ")
+						print("  ?: Help")
+						print("Possible controls: ")
+						for key in bindings:
+							print key
 
 
-
-		# Request wasn't successful
 		else: print "Unsuccessful wheel speed topic subscription request"
 
 
