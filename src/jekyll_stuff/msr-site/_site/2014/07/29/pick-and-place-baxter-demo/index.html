@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>ME 495 - Embedded Systems in Robotics</title>
+
+	<link rel="icon" type="image/png" href="/example-jekyll-site/assets/img/nu-logo.png">
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/example-jekyll-site/assets/css/style.css">
+</head>
+
+	<body>
+
+		<div id="wrapper">
+
+			<header>
+	<div id="header-branding">
+		<div class="header-inner">
+			<img src="/example-jekyll-site/assets/img/nu-logo.png">
+			<h2>ME 495 - Embedded Systems in Robotics</h2>
+		</div>
+	</div>
+
+	<div id="header-navigation">
+		<div class="header-inner">
+			<nav>
+				<ul>
+					<li><a href="/example-jekyll-site/">HOME</a></li>
+					<li><a href="#">PROJECTS</a></li>
+					<li><a href="/example-jekyll-site/about">ABOUT</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+			<div id="content">
+				<main>
+
+					<article class="post">
+
+						<section class="post-heading">
+
+							<img class="featured-image" src="/example-jekyll-site/assets/img/baxter-pick-place2.jpg">
+							<h1 class="post-title">Pick and Place Baxter Demo</h1>
+							<a class="post-demo" target="_blank" href="https://github.com/jonrovira/baxter_work">
+								<span>Check out the demo</span>
+								<i class="fa fa-github"></i>
+							</a>
+
+							<div class="post-requirements">
+								<h4>Requirements</h4>
+								<ul>
+									
+										<li>OpenCV ROS package (cv2 and CvBridge)</li>
+									
+										<li>Rethink Robotics Baxter robot</li>
+									
+										<li>Properly configured workspace for Baxter robot</li>
+									
+								</ul>
+							</div>
+
+						</section>
+
+						<section class="post-overview">
+							<h3>Overview</h3>
+							<p>Use OpenCV to detect an object in Baxter's workspace and implement motion and graps planning to manipulate one of Baxter's arms to grasp the object.</p>
+						</section>
+
+						<section class="post-content">
+
+							<div class='post-demo-instructions'>
+								<h3>Get the demo up and running</h3>
+								<ol>
+									
+										
+											<li>
+												Make sure 'Enable Networking' is unchecked in the networking menu of your computer
+											</li>
+										
+
+									
+										
+											<li>
+												Ensure that Baxter's ethernet cable is connected to your computer
+											</li>
+										
+
+									
+										
+											<li>
+												Open up a terminal and run Avahi's network address configuration daemon
+												<code>$ sudo avahi-autoipd eth0</code>
+											</li>
+										
+
+									
+										
+											<li>
+												In a new terminal, run the Baxter setup script (assuming it's properly configured) that is located in the root directory of your ROS workspace
+												<code>$ ./baxter.sh</code>
+											</li>
+										
+
+									
+										
+											<li>
+												Run the demo
+												<code>$ roslaunch 'pkg_name' pick_and_place.launch</code>
+											</li>
+										
+
+									
+								</ol>
+							</div>
+
+							<div class="post-starts">
+								<h3>Great places to start</h3>
+								<ul>
+									
+										
+											<li>
+												<a href="opencv-srf.blogspot.ro/2010/09/object-detection-using-color-seperation.html">Thresholding images by color example</a>
+											</li>
+										
+
+									
+										
+											<li>
+												<a href="sdk.rethinkrobotics.com/wiki/Worked_Example_Visual_Servoing">Worked Example of Visual Servoing</a>
+											</li>
+										
+
+									
+								</ul>
+							</div>
+
+						</section>
+
+
+					</article>
+
+				</main>
+			</div>
+
+			<footer>
+	<div id="foot-inner">
+	</div>
+</footer>
+
+		</div>
+
+	</body>
+</html>

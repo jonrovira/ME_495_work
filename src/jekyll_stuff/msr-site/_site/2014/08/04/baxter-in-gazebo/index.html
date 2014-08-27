@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>ME 495 - Embedded Systems in Robotics</title>
+
+	<link rel="icon" type="image/png" href="/example-jekyll-site/assets/img/nu-logo.png">
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/example-jekyll-site/assets/css/style.css">
+</head>
+
+	<body>
+
+		<div id="wrapper">
+
+			<header>
+	<div id="header-branding">
+		<div class="header-inner">
+			<img src="/example-jekyll-site/assets/img/nu-logo.png">
+			<h2>ME 495 - Embedded Systems in Robotics</h2>
+		</div>
+	</div>
+
+	<div id="header-navigation">
+		<div class="header-inner">
+			<nav>
+				<ul>
+					<li><a href="/example-jekyll-site/">HOME</a></li>
+					<li><a href="#">PROJECTS</a></li>
+					<li><a href="/example-jekyll-site/about">ABOUT</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+			<div id="content">
+				<main>
+
+					<article class="post">
+
+						<section class="post-heading">
+
+							<img class="featured-image" src="/example-jekyll-site/assets/img/baxter-in-gazebo2.png">
+							<h1 class="post-title">Baxter in Gazebo</h1>
+							<a class="post-demo" target="_blank" href="">
+								<span>Check out the demo</span>
+								<i class="fa fa-github"></i>
+							</a>
+
+							<div class="post-requirements">
+								<h4>Requirements</h4>
+								<ul>
+									
+										<li>python-wstool</li>
+									
+										<li>python-rosdep</li>
+									
+										<li>ros-hydro-pcl-conversions</li>
+									
+										<li>ros-hydro-control-msgs</li>
+									
+										<li>ros-hydro-cmake-modules</li>
+									
+										<li>ros-hydro-qt-build</li>
+									
+										<li>ros-hydro-moveit-full</li>
+									
+										<li>ros-hydro-driver-common</li>
+									
+										<li>ros-hydro-image-common</li>
+									
+										<li>ros-hydro-rostest-gazebo</li>
+									
+										<li>Baxter Simulation repository (must request access by emailing RSDK.support@rethinkrobotics.com</li>
+									
+								</ul>
+							</div>
+
+						</section>
+
+						<section class="post-overview">
+							<h3>Overview</h3>
+							<p>Learn how to quickly get a Baxter simulation running in Gazebo. Execute the joint position keyboard example in the simulation.</p>
+						</section>
+
+						<section class="post-content">
+
+							<div class='post-demo-instructions'>
+								<h3>Get the demo up and running</h3>
+								<ol>
+									
+										
+											<li>
+												Complete the simulator installation instructions located at sdk.rethinkrobotics.com/wiki/Simulator_Installation
+											</li>
+										
+
+									
+										
+											<li>
+												Run the Baxter setup script located in the root of your workspace with the simulation parameter
+												<code>$ ./baxter.sh sim</code>
+											</li>
+										
+
+									
+										
+											<li>
+												Start the simulation with controllers
+												<code>$ roslaunch baxter_gazebo baxter_world.launch</code>
+											</li>
+										
+
+									
+										
+											<li>
+												In a new terminal, run the joint position keyboard example
+												<code>$ rosrun baxter_examples joint_position_keyboard.py</code>
+											</li>
+										
+
+									
+								</ol>
+							</div>
+
+							<div class="post-starts">
+								<h3>Great places to start</h3>
+								<ul>
+									
+										
+											<li>
+												<a href="sdk.rethinkrobotics.com//wiki/Simulator_Installation">Baxter Simulation Installation</a>
+											</li>
+										
+
+									
+								</ul>
+							</div>
+
+						</section>
+
+
+					</article>
+
+				</main>
+			</div>
+
+			<footer>
+	<div id="foot-inner">
+	</div>
+</footer>
+
+		</div>
+
+	</body>
+</html>
