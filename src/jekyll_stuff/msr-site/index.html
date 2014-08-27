@@ -2,22 +2,22 @@
 layout: default
 title: Home
 ---
-<div class="page" id="home">
+<main id="home">
 	<h1>{{ page.title }}</h1>
 
 
 	<section id="recent-projects">
-		<h3>Recent Projects</h3>
+		<h2>Recent Projects</h2>
 
 		<ul>
 			{% for post in site.posts limit: 4 %}
 				<li>
 					<a href="{{ site.baseurl }}{{ post.url }}">
-						<img src="{{ site.baseurl }}{{ post.image }}">
-						<h1>{{ post.title }}</h1>
+						<img src="http://unsplash.it/300?random">
+						<h2>{{ post.title }}</h2>
 					</a>
 				</li>
 			{% endfor %}
 		</ul> 
 	</section>
-</div>
+</main>

@@ -1,6 +1,6 @@
 ---
 layout:             post
-image:              /assets/img/robot-web-tools.jpg
+image:              /robot-web-tools.jpg
 title:              Robot Web Tools with Baxter
 demo:               https://github.com/jonrovira/robot_web_tools
 requirements:       [ros-hydro-ros-base (basic ROS installation), 

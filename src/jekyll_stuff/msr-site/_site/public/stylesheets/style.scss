@@ -1,32 +1,43 @@
-/* Global */
-html, body {
-	font-family: Helvetica, Arial, sans-serif;
-	background: url('/assets/img/brushed/brushed.png');
+/* Globals */
+$relative-assets-path: '..';
+$font-family: Arial, Helvetica, sans-serif;
+$inner-width: 65%;
+
+
+/* Templating */
+html, body, div, span, h1, h2, h3, h4,
+h5, h6, p, a, img, i, ol, ul, li, form,
+label, table, caption, {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-family: $font-family;
+	background: url($relative-assets-path + '/images/brushed/brushed.png');
 
 	body {
-		margin: 0;
-		padding: 0;
 
 		#wrapper {
 			width: 100%;
 
-			#content {
+			main {
 				margin: 0 auto;
 				padding: 40px;
-				width: calc(68% - 80px);
-				background-color: #FFF;
+				width: calc(#{$inner-width} - 80px);
+				background-color: #fff;
 				box-shadow: 6px 0px 10px -7px #888,
 				           -6px 0px 10px -7px #888;
 
-				.page {
-					width: 100%;
+				h1 {
+					margin-bottom: 20px;
+					font-size: 45px;
 				}
+			}
+			h1, h2, h3, p {
+				color: #222;
 			}
 		}
 	}
-}
-h1, h2, h3, p {
-	color: #222;
 }
 
 
@@ -34,104 +45,94 @@ h1, h2, h3, p {
 /* Header */
 header {
 	width: 100%;
-	background: url("/assets/img/header-wrap-bg.png") repeat-x;
 
-	#header-branding {
+	div#header-branding {
 		background: -webkit-linear-gradient(left, #490459, #490459, #823292, #490459);
 		background: -moz-linear-gradient(right, #490459, #490459, #823292, #490459);
 		background: linear-gradient(to right, #490459, #490459, #823292, #490459);
 
-		.header-inner {
-			padding: 0 auto;
-			overflow: auto;
+		div#header-branding-inner {
+			margin: 0 auto;
+			padding: 20px 0;
+			width: $inner-width;
 
 			img {
-				float: left;
+				display: inline-block;
 				margin: 0 70px 0 0;
 			}
 			h2 {
-				margin: 0;
-				line-height: 154px;
-				text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+				display: inline-block;
 				color: #ffffff;
 				font-size: 35px;
+				line-height: 140px;
+				vertical-align: top;
+				text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 			}
 		}
 	}
-	#header-navigation {
-		overflow: auto;
+	nav#header-navigation {
 		background-color: #31043f;
 
-		.header-inner {
+		ul {
+			margin: 0 auto;
+			width: $inner-width;
+			list-style: none;
 
-			nav {
-				float: left;
-				width: 100%;
+			li {
+				display: inline-block;
+				width: calc(100% / 3 - 4px);
+				border-right: 1px solid #5b3b64;
 
-				ul {
-					margin: 0;
-					padding: 0;
-					width: 100%;
-					list-style: none;
-
-					li {
-						display: inline-block;
-						padding: 10px 0;
-						width: calc(100% / 3 - 4px);
-						border-right: 1px solid #5b3b64;
-
-						a {
-							display: block;
-							text-align: center;
-							text-decoration: none;
-							font-size: 18px;
-							color: #ffffff;
-						}
-					}
-					li:first-child {
-						border-left: 1px solid #5b3b64;
-					}
+				a {
+					display: block;
+					padding: 10px 0;
+					text-align: center;
+					text-decoration: none;
+					font-size: 18px;
+					color: #fff;
 				}
 			}
+			li:first-child {
+				border-left: 1px solid #5b3b64;
+			}
 		}
-	}
-	div .header-inner {
-		margin: 0 auto;
-		width: 68%;
 	}
 }
 
 
 
 /* Home */
-#home.page {
+main#home {
 
-	#recent-projects {
+	section#recent-projects {
 		width: 100%;
 
+
+		h2 {
+			margin: 15px 0;
+			font-size: 25px;
+		}
 		ul {
-			margin: 0;
-			padding: 0;
 
 			li {
 				display: inline-block;
-				padding: 8px;
-				width: calc(100% / 4 - 36px);
+				width: calc(100% / 4 - 20px);
 				border: 1px solid #aaa;
-				border-radius: 4px;
-				box-shadow: 6px 0px 8px -8px #888,
-	                       -6px 0px 8px -8px #888,
-	                        0px 6px 8px -8px #888,
-	                        0px -6px 8px -8px #888;
-	            text-align: center;
+				border-radius: 3px;
+				box-shadow: 6px  0px 7px -7px #888,
+	                        0px  6px 7px -7px #888;
 
 	            a {
 	            	text-decoration: none;
 
 	            	img {
-	            		max-width: 95%;
+	            		width: 100%;
+	            		border-bottom: 1px solid #aaa;
 	            	}
-	            	h1 {
+	            	h2 {
+	            		padding: 10px 5px;
+	            		width: 100%;
+	            		text-align: center;
 	            		font-size: 15px;
 	            	}
 	            }

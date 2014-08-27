@@ -1,94 +1,93 @@
-/* Global */
-html, body {
-  font-family: Helvetica, Arial, sans-serif;
-  background: url("/assets/img/brushed/brushed.png"); }
-  html body, body body {
-    margin: 0;
-    padding: 0; }
-    html body #wrapper, body body #wrapper {
-      width: 100%; }
-      html body #wrapper #content, body body #wrapper #content {
-        margin: 0 auto;
-        padding: 40px;
-        width: calc(68% - 80px);
-        background-color: #FFF;
-        box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888; }
-        html body #wrapper #content .page, body body #wrapper #content .page {
-          width: 100%; }
+/* Globals */
+/* Templating */
+html, body, div, span, h1, h2, h3, h4,
+h5, h6, p, a, img, i, ol, ul, li, form,
+label, table, caption {
+  margin: 0;
+  padding: 0; }
 
-h1, h2, h3, p {
-  color: #222; }
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url("../images/brushed/brushed.png"); }
+  html body #wrapper {
+    width: 100%; }
+    html body #wrapper main {
+      margin: 0 auto;
+      padding: 40px;
+      width: calc(65% - 80px);
+      background-color: #fff;
+      box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888; }
+      html body #wrapper main h1 {
+        margin-bottom: 20px;
+        font-size: 45px; }
+    html body #wrapper h1, html body #wrapper h2, html body #wrapper h3, html body #wrapper p {
+      color: #222; }
 
 /* Header */
 header {
-  width: 100%;
-  background: url("/assets/img/header-wrap-bg.png") repeat-x; }
-  header #header-branding {
+  width: 100%; }
+  header div#header-branding {
     background: -webkit-linear-gradient(left, #490459, #490459, #823292, #490459);
     background: -moz-linear-gradient(right, #490459, #490459, #823292, #490459);
     background: linear-gradient(to right, #490459, #490459, #823292, #490459); }
-    header #header-branding .header-inner {
-      padding: 0 auto;
-      overflow: auto; }
-      header #header-branding .header-inner img {
-        float: left;
+    header div#header-branding div#header-branding-inner {
+      margin: 0 auto;
+      padding: 20px 0;
+      width: 65%; }
+      header div#header-branding div#header-branding-inner img {
+        display: inline-block;
         margin: 0 70px 0 0; }
-      header #header-branding .header-inner h2 {
-        margin: 0;
-        line-height: 154px;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      header div#header-branding div#header-branding-inner h2 {
+        display: inline-block;
         color: #ffffff;
-        font-size: 35px; }
-  header #header-navigation {
-    overflow: auto;
+        font-size: 35px;
+        line-height: 140px;
+        vertical-align: top;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+  header nav#header-navigation {
     background-color: #31043f; }
-    header #header-navigation .header-inner nav {
-      float: left;
-      width: 100%; }
-      header #header-navigation .header-inner nav ul {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        list-style: none; }
-        header #header-navigation .header-inner nav ul li {
-          display: inline-block;
+    header nav#header-navigation ul {
+      margin: 0 auto;
+      width: 65%;
+      list-style: none; }
+      header nav#header-navigation ul li {
+        display: inline-block;
+        width: calc(100% / 3 - 4px);
+        border-right: 1px solid #5b3b64; }
+        header nav#header-navigation ul li a {
+          display: block;
           padding: 10px 0;
-          width: calc(100% / 3 - 4px);
-          border-right: 1px solid #5b3b64; }
-          header #header-navigation .header-inner nav ul li a {
-            display: block;
-            text-align: center;
-            text-decoration: none;
-            font-size: 18px;
-            color: #ffffff; }
-        header #header-navigation .header-inner nav ul li:first-child {
-          border-left: 1px solid #5b3b64; }
-  header div .header-inner {
-    margin: 0 auto;
-    width: 68%; }
+          text-align: center;
+          text-decoration: none;
+          font-size: 18px;
+          color: #fff; }
+      header nav#header-navigation ul li:first-child {
+        border-left: 1px solid #5b3b64; }
 
 /* Home */
-#home.page #recent-projects {
+main#home section#recent-projects {
   width: 100%; }
-  #home.page #recent-projects ul {
-    margin: 0;
-    padding: 0; }
-    #home.page #recent-projects ul li {
-      display: inline-block;
-      padding: 8px;
-      width: calc(100% / 4 - 36px);
-      border: 1px solid #aaa;
-      border-radius: 4px;
-      box-shadow: 6px 0px 8px -8px #888, -6px 0px 8px -8px #888, 0px 6px 8px -8px #888, 0px -6px 8px -8px #888;
-      text-align: center; }
-      #home.page #recent-projects ul li a {
-        text-decoration: none; }
-        #home.page #recent-projects ul li a img {
-          max-width: 95%; }
-        #home.page #recent-projects ul li a h1 {
-          font-size: 15px; }
-    #home.page #recent-projects ul li:not(:first-child) {
-      margin-left: 20px; }
+  main#home section#recent-projects h2 {
+    margin: 15px 0;
+    font-size: 25px; }
+  main#home section#recent-projects ul li {
+    display: inline-block;
+    width: calc(100% / 4 - 20px);
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: 6px  0px 7px -7px #888, 0px  6px 7px -7px #888; }
+    main#home section#recent-projects ul li a {
+      text-decoration: none; }
+      main#home section#recent-projects ul li a img {
+        width: 100%;
+        border-bottom: 1px solid #aaa; }
+      main#home section#recent-projects ul li a h2 {
+        padding: 10px 5px;
+        width: 100%;
+        text-align: center;
+        font-size: 15px; }
+  main#home section#recent-projects ul li:not(:first-child) {
+    margin-left: 20px; }
 
 /* Posts */
 article.post h3 {
@@ -148,3 +147,5 @@ footer {
     padding: 10px 0;
     width: 80%;
     overflow: auto; }
+
+/*# sourceMappingURL=style.css.map */
