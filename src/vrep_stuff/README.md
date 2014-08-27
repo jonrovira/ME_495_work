@@ -5,6 +5,7 @@ In order to connect each python script to v-rep, the child scripts within the Ba
 
 
 ### Get your workstation set up
+* Install ROS
 * Download v-rep from www.coppeliarobotics.com/downloads.html
 * Download everyting in this directory
 
