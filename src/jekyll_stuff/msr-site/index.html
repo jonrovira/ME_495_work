@@ -7,7 +7,7 @@ title: Home
 
 	<section id="recent-projects">
 		<h2>Recent Projects</h2>
-		<button class="see-all"><a href="#">See all</a></button>
+		<button class="see-all"><a href="{{ site.baseurl }}/projects/">See all</a></button>
 		<div id="slider-wrapper">
 			<ul>
 				{% for post in site.posts limit: 4 %}
@@ -24,17 +24,40 @@ title: Home
 		</div>
 	</section>
 
-	<section id="students">
-		<h2>Students</h2>
-		<button class="see-all"><a href="#">See all</a></button>
+	<hr>
+
+	<section id="people">
+		<h2>People</h2>
+		<button class="see-all"><a href="{{ site.baseurl }}/people/">See all</a></button>
 		<ul>
 			{% for person in site.people limit: 4 %}
 				<li>
-					<img src="http://unsplash.it/300?random">
-					<div class="student-info">
+					<img src="http://unsplash.it/200?random">
+					<div class="person-info">
 						<a href="{{ site.baseurl }}{{ person.url }}"><h2>{{ person.name }}</h2></a>
 						<h3>Focuses: {{ person.focus }}</h3>
 						<h3>Website: <a href="{{ person.website }}">{{ person.website }}</a></h3>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+
+	<hr>
+
+	<section id="recent-wiki">
+		<h2>Recent Wiki Post</h2>
+		<button class="see-all"><a href="{{ site.baseurl }}/wiki/">Go to Wiki</a></button>
+		<ul>
+			{% for wiki in site.wiki limit: 1 %}
+				<li>
+					<img src="http://unsplash.it/350?random">
+					<div class="wiki-info">
+						<h3 class="wiki-date">{{ wiki.date }}</h3>
+						<h2 class="wiki-title">{{ wiki.title }}</h2>
+						<h3 class="wiki-author">Written by {{ wiki.author }}</h3>
+						<h4 class="wiki-tags">Tags: {{ wiki.tags }}</h4>
+						<p class="wiki-content">{{ wiki.content | truncatewords: 150 }}</p>
 					</div>
 				</li>
 			{% endfor %}

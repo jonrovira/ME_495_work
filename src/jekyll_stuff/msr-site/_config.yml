@@ -9,6 +9,12 @@ markdown:           kramdown
 permalink:          pretty
 
 collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
   people:
     output: true
     permalink: /people/:path/
+  wiki:
+    output: true
+    permalink: /wiki/:path/

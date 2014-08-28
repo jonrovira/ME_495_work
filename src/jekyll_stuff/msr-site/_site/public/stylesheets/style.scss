@@ -36,7 +36,7 @@ html {
 					font-size: 45px;
 				}
 			}
-			h1, h2, h3, p {
+			h1, h2, h3, h4, p {
 				color: #333;
 			}
 		}
@@ -131,6 +131,7 @@ main#home {
 			border-radius: 3px;
 			box-shadow: $box-shadow;
 	        cursor: pointer;
+	        outline: none;
 
 			a {
 				color: #555;
@@ -169,7 +170,6 @@ main#home {
 						}
 						h2 {
 							position: absolute;
-
 							top: 0;
 						}
 					}
@@ -207,7 +207,7 @@ main#home {
 			}
 		}
 	}
-	section#students {
+	section#people {
 		width: 100%;
 
 		ul {
@@ -222,16 +222,16 @@ main#home {
 
 	            img {
 	            	display: inline-block;
-	            	margin-right: 20px;
 	            	width: 20%;
 	            	vertical-align: top;
 	            }
-	            div.student-info {
+	            div.person-info {
 	            	display: inline-block;
 	            	padding: 20px;
 
 	            	> a {
 	            		text-decoration: none;
+	            		color: #333;
 
 	            		h2 {
 	            			margin-bottom: 5px;
@@ -253,10 +253,56 @@ main#home {
 			li:nth-child(2n) {
 				margin-left: 20px;
 			}
+			li:nth-child(3), li:nth-child(4) {
+				margin-bottom: 0;
+			}
 		}
 	}
-	section#student-highlights {
+	section#recent-wiki {
 
+		ul {
+			list-style: none;
+
+			li {
+
+				img {
+					display: inline-block;
+					width: 30%;
+					vertical-align: top;
+				}
+				div.wiki-info {
+					position: relative;
+					padding: 0 20px 0 20px;
+					width: 65%;
+					display: inline-block;
+
+					h3.wiki-date {
+						font-size: 14px;
+						margin-bottom: 10px;
+					}
+					h2.wiki-title {
+					}
+					h3.wiki-author {
+						font-size: 14px;
+						font-weight: normal;
+					}
+					h4.wiki-tags {
+						font-weight: normal;
+						font-size: 14px;
+					}
+					p.wiki-content {
+						margin: 20px 0 30px 0;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+	hr {
+		margin: 50px 0 30px 0;
+		height: 1px;
+		border: 0;
+		box-shadow: inset 0 6px 6px -6px #555;
 	}
 }
 
