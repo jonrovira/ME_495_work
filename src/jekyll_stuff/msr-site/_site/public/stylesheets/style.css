@@ -21,7 +21,7 @@ html {
         margin-bottom: 20px;
         font-size: 45px; }
     html body #wrapper h1, html body #wrapper h2, html body #wrapper h3, html body #wrapper p {
-      color: #222; }
+      color: #333; }
 
 /* Header */
 header {
@@ -39,6 +39,7 @@ header {
         margin: 0 70px 0 0; }
       header div#header-branding div#header-branding-inner h2 {
         display: inline-block;
+        margin-left: 110px;
         color: #ffffff;
         font-size: 35px;
         line-height: 140px;
@@ -52,7 +53,7 @@ header {
       list-style: none; }
       header nav#header-navigation ul li {
         display: inline-block;
-        width: calc(100% / 3 - 4px);
+        width: calc(100% / 4 - 5px);
         border-right: 1px solid #5b3b64; }
         header nav#header-navigation ul li a {
           display: block;
@@ -60,34 +61,85 @@ header {
           text-align: center;
           text-decoration: none;
           font-size: 18px;
+          font-weight: bold;
           color: #fff; }
       header nav#header-navigation ul li:first-child {
         border-left: 1px solid #5b3b64; }
 
 /* Home */
+main#home section h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 15px 0;
+  font-size: 25px; }
+main#home section button {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 6px 10px;
+  color: #555;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #777;
+  border-radius: 3px;
+  box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
+  cursor: pointer; }
+  main#home section button a {
+    color: #555;
+    text-decoration: none; }
+main#home section button:active {
+  position: relative;
+  top: 1px; }
+main#home section#projects {
+  width: 100%; }
+  main#home section#projects div#slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
+    main#home section#projects div#slider-wrapper ul {
+      position: relative;
+      top: 0;
+      left: 0;
+      list-style: none; }
+      main#home section#projects div#slider-wrapper ul li {
+        float: left; }
+        main#home section#projects div#slider-wrapper ul li img {
+          display: block; }
+    main#home section#projects div#slider-wrapper div#slider-controls {
+      margin-top: 10px; }
+      main#home section#projects div#slider-wrapper div#slider-controls div#slider-prev {
+        float: left;
+        cursor: pointer; }
+      main#home section#projects div#slider-wrapper div#slider-controls div#slider-next {
+        float: right;
+        cursor: pointer; }
 main#home section#recent-projects {
   width: 100%; }
-  main#home section#recent-projects h2 {
-    margin: 15px 0;
-    font-size: 25px; }
-  main#home section#recent-projects ul li {
-    display: inline-block;
-    width: calc(100% / 4 - 20px);
-    border: 1px solid #aaa;
-    border-radius: 3px;
-    box-shadow: 6px  0px 7px -7px #888, 0px  6px 7px -7px #888; }
-    main#home section#recent-projects ul li a {
-      text-decoration: none; }
-      main#home section#recent-projects ul li a img {
-        width: 100%;
-        border-bottom: 1px solid #aaa; }
-      main#home section#recent-projects ul li a h2 {
-        padding: 10px 5px;
-        width: 100%;
-        text-align: center;
-        font-size: 15px; }
-  main#home section#recent-projects ul li:not(:first-child) {
-    margin-left: 20px; }
+  main#home section#recent-projects ul {
+    margin-bottom: 20px; }
+    main#home section#recent-projects ul li {
+      display: inline-block;
+      width: calc(100% / 4 - 20px);
+      border: 1px solid #aaa;
+      border-radius: 3px;
+      box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
+      main#home section#recent-projects ul li a {
+        text-decoration: none; }
+        main#home section#recent-projects ul li a img {
+          width: 100%;
+          border-bottom: 1px solid #aaa; }
+        main#home section#recent-projects ul li a h2 {
+          padding: 10px 5px;
+          width: 100%;
+          text-align: center;
+          font-size: 14px; }
+    main#home section#recent-projects ul li:not(:first-child) {
+      margin-left: 20px; }
+    main#home section#recent-projects ul li:hover {
+      opacity: 0.8;
+      -webkit-transition: 0.2s;
+      -moz-transition: 0.2s;
+      -o-transition: 0.2s;
+      transition: 0.2s; }
 
 /* Posts */
 article.post h3 {

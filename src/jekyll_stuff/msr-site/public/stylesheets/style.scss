@@ -2,6 +2,8 @@
 $relative-assets-path: '..';
 $font-family: Arial, Helvetica, sans-serif;
 $inner-width: 65%;
+$box-shadow: 6px  0px 7px -7px #888,
+	         0px  6px 7px -7px #888;
 
 
 /* Templating */
@@ -34,7 +36,7 @@ html {
 				}
 			}
 			h1, h2, h3, p {
-				color: #222;
+				color: #333;
 			}
 		}
 	}
@@ -62,6 +64,7 @@ header {
 			}
 			h2 {
 				display: inline-block;
+				margin-left: 110px;
 				color: #ffffff;
 				font-size: 35px;
 				line-height: 140px;
@@ -80,7 +83,7 @@ header {
 
 			li {
 				display: inline-block;
-				width: calc(100% / 3 - 4px);
+				width: calc(100% / 4 - 5px);
 				border-right: 1px solid #5b3b64;
 
 				a {
@@ -89,11 +92,14 @@ header {
 					text-align: center;
 					text-decoration: none;
 					font-size: 18px;
+					font-weight: bold;
 					color: #fff;
 				}
 			}
 			li:first-child {
 				border-left: 1px solid #5b3b64;
+			}
+			li:hover {
 			}
 		}
 	}
@@ -104,23 +110,84 @@ header {
 /* Home */
 main#home {
 
-	section#recent-projects {
-		width: 100%;
-
-
+	section {
 		h2 {
+			display: inline-block;
+			vertical-align: middle;
 			margin: 15px 0;
 			font-size: 25px;
 		}
+		button {
+			display: inline-block;
+			margin-left: 5px;
+			padding: 6px 10px;
+			color: #555;
+			font-size: 14px;
+			background-color: #fff;
+			border: 1px solid #777;
+			border-radius: 3px;
+			box-shadow: $box-shadow;
+	        cursor: pointer;
+
+			a {
+				color: #555;
+				text-decoration: none;
+			}
+		}
+		button:active {
+			position: relative;
+			top: 1px;
+		}
+	}
+	section#projects {
+		width: 100%;
+
+		div#slider-wrapper {
+			width: 100%;
+			overflow: hidden;
+			box-shadow: $box-shadow;
+
+			ul {
+				position: relative;
+				top: 0;
+				left: 0;
+				list-style: none;
+
+				li {
+					float: left;
+
+					img {
+						display: block;
+					}
+				}
+			}
+
+			div#slider-controls {
+				margin-top: 10px;
+
+				div#slider-prev {
+					float: left;
+					cursor: pointer;
+				}
+				div#slider-next {
+					float: right;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	section#recent-projects {
+		width: 100%;
+
 		ul {
+			margin-bottom: 20px;
 
 			li {
 				display: inline-block;
 				width: calc(100% / 4 - 20px);
 				border: 1px solid #aaa;
 				border-radius: 3px;
-				box-shadow: 6px  0px 7px -7px #888,
-	                        0px  6px 7px -7px #888;
+				box-shadow: $box-shadow;
 
 	            a {
 	            	text-decoration: none;
@@ -133,14 +200,24 @@ main#home {
 	            		padding: 10px 5px;
 	            		width: 100%;
 	            		text-align: center;
-	            		font-size: 15px;
+	            		font-size: 14px;
 	            	}
 	            }
 			}
 			li:not(:first-child) {
 				margin-left: 20px;
 			}
+			li:hover {
+				opacity: 0.8;
+				-webkit-transition: 0.2s;
+				-moz-transition: 0.2s;
+				-o-transition: 0.2s;
+				transition: 0.2s;
+			}
 		}
+	}
+	section#student-highlights {
+
 	}
 }
 

@@ -6,3 +6,7 @@ image_path:         /public/images
 
 markdown:           kramdown
 permalink:          pretty
+
+colletions:
+-  people
+-  projects

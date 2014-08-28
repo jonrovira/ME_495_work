@@ -3,12 +3,28 @@ layout: default
 title: Home
 ---
 <main id="home">
-	<h1>{{ page.title }}</h1>
 
+	<section id="projects">
+		<h2>Recent Projects</h2>
+		<button><a href="#">See all</a></button>
+		<div id="slider-wrapper">
+			<ul>
+				<li><img src="http://unsplash.it/1130/400?random"></li>
+				<li><img src="http://unsplash.it/1130/400?random"></li>
+				<li><img src="http://unsplash.it/1130/400?random"></li>
+				<li><img src="http://unsplash.it/1130/400?random"></li>
+				<li><img src="http://unsplash.it/1130/400?random"></li>
+			</ul>
+			<div id="slider-controls">
+				<div id="slider-prev"><i class="fa fa-caret-left"></i></div>
+				<div id="slider-next"><i class="fa fa-caret-right"></i></div>
+			</div>
+		</div>
+	</section>
 
 	<section id="recent-projects">
 		<h2>Recent Projects</h2>
-
+		<button><a href="#">See all</a></button>
 		<ul>
 			{% for post in site.posts limit: 4 %}
 				<li>
@@ -18,6 +34,12 @@ title: Home
 					</a>
 				</li>
 			{% endfor %}
-		</ul> 
+		</ul>
 	</section>
+
+	<section id="student-highlights">
+		<h2>Student Highlights</h2>
+		<button><a href="#">See all</a></button>
+	</section>
+
 </main>
