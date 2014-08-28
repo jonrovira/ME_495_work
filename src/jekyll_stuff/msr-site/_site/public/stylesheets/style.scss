@@ -168,9 +168,8 @@ main#home {
 						img {
 							display: block;
 						}
-						h2 {
-							position: absolute;
-							top: 0;
+						h2, p {
+							display: none;
 						}
 					}
 				}
@@ -204,6 +203,22 @@ main#home {
 				right: 0;
 				margin-right: -8px;
 				border-radius: 90px 0 0 90px;
+			}
+			div#slider-info {
+				position: absolute;
+				bottom: 0;
+				padding: 20px;
+				width: calc(100% - 40px);
+				height: 55px;
+				background-color: #444;
+				opacity: 0.8;
+
+				h2, p {
+					color: #fff;
+				}
+				h2 {
+					margin-bottom: 5px;
+				}
 			}
 		}
 	}

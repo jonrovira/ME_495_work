@@ -111,9 +111,8 @@ main#home section#recent-projects {
           position: relative; }
           main#home section#recent-projects div#slider-wrapper ul li a img {
             display: block; }
-          main#home section#recent-projects div#slider-wrapper ul li a h2 {
-            position: absolute;
-            top: 0; }
+          main#home section#recent-projects div#slider-wrapper ul li a h2, main#home section#recent-projects div#slider-wrapper ul li a p {
+            display: none; }
     main#home section#recent-projects div#slider-wrapper button {
       position: absolute;
       top: 50%;
@@ -138,6 +137,18 @@ main#home section#recent-projects {
       right: 0;
       margin-right: -8px;
       border-radius: 90px 0 0 90px; }
+    main#home section#recent-projects div#slider-wrapper div#slider-info {
+      position: absolute;
+      bottom: 0;
+      padding: 20px;
+      width: calc(100% - 40px);
+      height: 55px;
+      background-color: #444;
+      opacity: 0.8; }
+      main#home section#recent-projects div#slider-wrapper div#slider-info h2, main#home section#recent-projects div#slider-wrapper div#slider-info p {
+        color: #fff; }
+      main#home section#recent-projects div#slider-wrapper div#slider-info h2 {
+        margin-bottom: 5px; }
 main#home section#people {
   width: 100%; }
   main#home section#people ul li {

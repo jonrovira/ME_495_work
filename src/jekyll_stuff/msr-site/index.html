@@ -15,12 +15,17 @@ title: Home
 						<a href="{{ site.baseurl }}{{ post.url }}">
 							<img src="http://unsplash.it/1130/400?random">
 							<h2>{{ post.title }}</h2>
+							<p>{{ post.overview | truncatewords: 18 }}</p>
 						</a>
 					</li>
 				{% endfor %}
 			</ul>
 			<button id="slider-prev"><i class="fa fa-caret-left"></i></button>
 			<button id="slider-next"><i class="fa fa-caret-right"></i></button>
+			<div id="slider-info">
+				<h2 class="slider-title"></h2>
+				<p class="slider-content"></p>
+			</div>
 		</div>
 	</section>
 
@@ -51,14 +56,16 @@ title: Home
 		<ul>
 			{% for wiki in site.wiki limit: 1 %}
 				<li>
-					<img src="http://unsplash.it/350?random">
-					<div class="wiki-info">
-						<h3 class="wiki-date">{{ wiki.date }}</h3>
-						<h2 class="wiki-title">{{ wiki.title }}</h2>
-						<h3 class="wiki-author">Written by {{ wiki.author }}</h3>
-						<h4 class="wiki-tags">Tags: {{ wiki.tags }}</h4>
-						<p class="wiki-content">{{ wiki.content | truncatewords: 150 }}</p>
-					</div>
+					<a href="{{ site.baseurl }}{{ wiki.url }}">
+						<img src="http://unsplash.it/350?random">
+						<div class="wiki-info">
+							<h3 class="wiki-date">{{ wiki.date }}</h3>
+							<h2 class="wiki-title">{{ wiki.title }}</h2>
+							<h3 class="wiki-author">Written by {{ wiki.author }}</h3>
+							<h4 class="wiki-tags">Tags: {{ wiki.tags }}</h4>
+							<p class="wiki-content">{{ wiki.content | truncatewords: 150 }}</p>
+						</div>
+					</a>
 				</li>
 			{% endfor %}
 		</ul>

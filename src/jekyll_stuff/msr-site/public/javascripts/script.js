@@ -20,8 +20,14 @@ var toGalleryItem = function($target, maxScrollPosition) {
 				left : -maxScrollPosition
 			});
 		}
+		setSliderText();
 	}
 };
+
+var setSliderText = function() {
+	$('main#home section#recent-projects div#slider-info h2').html($('main#home section#recent-projects div#slider-wrapper ul li.active a h2').html());
+	$('main#home section#recent-projects div#slider-info p').html($('main#home section#recent-projects div#slider-wrapper ul li.active a p').html());
+}
 
 
 $(window).load(function() {
@@ -36,6 +42,7 @@ $(window).load(function() {
 
 	$('main#home section#recent-projects div#slider-wrapper ul').width(totalWidth);
 	$('main#home section#recent-projects div#slider-wrapper ul li:first').addClass('active');
+	setSliderText();
 	$('main#home section#recent-projects div#slider-wrapper button#slider-prev').click(function() {
 		var $target = $('main#home section#recent-projects div#slider-wrapper ul li.active').prev();
 		toGalleryItem($target, maxScrollPosition);
@@ -44,5 +51,6 @@ $(window).load(function() {
 		var $target = $('main#home section#recent-projects div#slider-wrapper ul li.active').next();
 		toGalleryItem($target, maxScrollPosition);
 	});
+
 
 });
