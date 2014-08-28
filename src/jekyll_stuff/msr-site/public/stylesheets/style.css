@@ -81,7 +81,7 @@ main#home section button {
   background-color: #fff;
   border: 1px solid #777;
   border-radius: 3px;
-  box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
+  box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888;
   cursor: pointer; }
   main#home section button a {
     color: #555;
@@ -89,52 +89,60 @@ main#home section button {
 main#home section button:active {
   position: relative;
   top: 1px; }
-main#home section#projects {
+main#home section#recent-projects {
   width: 100%; }
-  main#home section#projects div#slider-wrapper {
+  main#home section#recent-projects div#slider-wrapper {
+    position: relative;
     width: 100%;
+    height: 400px;
     overflow: hidden;
-    box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
-    main#home section#projects div#slider-wrapper ul {
+    box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+    main#home section#recent-projects div#slider-wrapper ul {
       position: relative;
       top: 0;
       left: 0;
       list-style: none; }
-      main#home section#projects div#slider-wrapper ul li {
+      main#home section#recent-projects div#slider-wrapper ul li {
         float: left; }
-        main#home section#projects div#slider-wrapper ul li img {
-          display: block; }
-    main#home section#projects div#slider-wrapper div#slider-controls {
-      margin-top: 10px; }
-      main#home section#projects div#slider-wrapper div#slider-controls div#slider-prev {
-        float: left;
-        cursor: pointer; }
-      main#home section#projects div#slider-wrapper div#slider-controls div#slider-next {
-        float: right;
-        cursor: pointer; }
-main#home section#recent-projects {
+        main#home section#recent-projects div#slider-wrapper ul li a {
+          position: relative; }
+          main#home section#recent-projects div#slider-wrapper ul li a img {
+            display: block; }
+          main#home section#recent-projects div#slider-wrapper ul li a h2 {
+            position: absolute;
+            top: 0; }
+    main#home section#recent-projects div#slider-wrapper button {
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+      cursor: pointer; }
+    main#home section#recent-projects div#slider-wrapper button#slider-prev {
+      left: 10px; }
+    main#home section#recent-projects div#slider-wrapper button#slider-next {
+      right: 10px; }
+main#home section#student-highlights {
   width: 100%; }
-  main#home section#recent-projects ul {
+  main#home section#student-highlights ul {
     margin-bottom: 20px; }
-    main#home section#recent-projects ul li {
+    main#home section#student-highlights ul li {
       display: inline-block;
       width: calc(100% / 4 - 20px);
       border: 1px solid #aaa;
       border-radius: 3px;
-      box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
-      main#home section#recent-projects ul li a {
+      box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+      main#home section#student-highlights ul li a {
         text-decoration: none; }
-        main#home section#recent-projects ul li a img {
+        main#home section#student-highlights ul li a img {
           width: 100%;
           border-bottom: 1px solid #aaa; }
-        main#home section#recent-projects ul li a h2 {
+        main#home section#student-highlights ul li a h2 {
           padding: 10px 5px;
           width: 100%;
           text-align: center;
           font-size: 14px; }
-    main#home section#recent-projects ul li:not(:first-child) {
+    main#home section#student-highlights ul li:not(:first-child) {
       margin-left: 20px; }
-    main#home section#recent-projects ul li:hover {
+    main#home section#student-highlights ul li:hover {
       opacity: 0.8;
       -webkit-transition: 0.2s;
       -moz-transition: 0.2s;
@@ -199,5 +207,3 @@ footer {
     padding: 10px 0;
     width: 80%;
     overflow: auto; }
-
-/*# sourceMappingURL=style.css.map */

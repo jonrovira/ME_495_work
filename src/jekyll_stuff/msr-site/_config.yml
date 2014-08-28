@@ -2,11 +2,13 @@ title:              ME 495 - Embedded Systems in Robotics
 description:        ""
 url:                "http://localhost:4000"
 baseurl:            /msr-site
+
 image_path:         /public/images
 
 markdown:           kramdown
 permalink:          pretty
 
-colletions:
--  people
--  projects
+collections:
+  people:
+    output: true
+    permalink: /people/:path/

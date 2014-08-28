@@ -2,44 +2,41 @@
 layout: default
 title: Home
 ---
-<main id="home">
 
-	<section id="projects">
-		<h2>Recent Projects</h2>
-		<button><a href="#">See all</a></button>
-		<div id="slider-wrapper">
-			<ul>
-				<li><img src="http://unsplash.it/1130/400?random"></li>
-				<li><img src="http://unsplash.it/1130/400?random"></li>
-				<li><img src="http://unsplash.it/1130/400?random"></li>
-				<li><img src="http://unsplash.it/1130/400?random"></li>
-				<li><img src="http://unsplash.it/1130/400?random"></li>
-			</ul>
-			<div id="slider-controls">
-				<div id="slider-prev"><i class="fa fa-caret-left"></i></div>
-				<div id="slider-next"><i class="fa fa-caret-right"></i></div>
-			</div>
-		</div>
-	</section>
+<main id="home">
 
 	<section id="recent-projects">
 		<h2>Recent Projects</h2>
 		<button><a href="#">See all</a></button>
-		<ul>
-			{% for post in site.posts limit: 4 %}
-				<li>
-					<a href="{{ site.baseurl }}{{ post.url }}">
-						<img src="http://unsplash.it/300?random">
-						<h2>{{ post.title }}</h2>
-					</a>
-				</li>
-			{% endfor %}
-		</ul>
+		<div id="slider-wrapper">
+			<ul>
+				{% for post in site.posts limit: 4 %}
+					<li>
+						<a href="{{ site.baseurl }}{{ post.url }}">
+							<img src="http://unsplash.it/1130/400?random">
+							<h2>{{ post.title }}</h2>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+			<button id="slider-prev"><i class="fa fa-caret-left"></i></button>
+			<button id="slider-next"><i class="fa fa-caret-right"></i></button>
+		</div>
 	</section>
 
 	<section id="student-highlights">
 		<h2>Student Highlights</h2>
 		<button><a href="#">See all</a></button>
+		<ul>
+			{% for person in site.people limit: 4 %}
+				<li>
+					<a href="{{ site.baseurl }}{{ pperson.url }}">
+						<img src="http://unsplash.it/300?random">
+						<h2>{{ person.name }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
 	</section>
 
 </main>
