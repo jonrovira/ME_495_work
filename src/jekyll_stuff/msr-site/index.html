@@ -7,7 +7,7 @@ title: Home
 
 	<section id="recent-projects">
 		<h2>Recent Projects</h2>
-		<button><a href="#">See all</a></button>
+		<button class="see-all"><a href="#">See all</a></button>
 		<div id="slider-wrapper">
 			<ul>
 				{% for post in site.posts limit: 4 %}
@@ -24,16 +24,18 @@ title: Home
 		</div>
 	</section>
 
-	<section id="student-highlights">
-		<h2>Student Highlights</h2>
-		<button><a href="#">See all</a></button>
+	<section id="students">
+		<h2>Students</h2>
+		<button class="see-all"><a href="#">See all</a></button>
 		<ul>
 			{% for person in site.people limit: 4 %}
 				<li>
-					<a href="{{ site.baseurl }}{{ pperson.url }}">
-						<img src="http://unsplash.it/300?random">
-						<h2>{{ person.name }}
-					</a>
+					<img src="http://unsplash.it/300?random">
+					<div class="student-info">
+						<a href="{{ site.baseurl }}{{ person.url }}"><h2>{{ person.name }}</h2></a>
+						<h3>Focuses: {{ person.focus }}</h3>
+						<h3>Website: <a href="{{ person.website }}">{{ person.website }}</a></h3>
+					</div>
 				</li>
 			{% endfor %}
 		</ul>

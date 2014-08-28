@@ -37,7 +37,7 @@ $(window).load(function() {
 	$('main#home section#recent-projects div#slider-wrapper ul').width(totalWidth);
 	$('main#home section#recent-projects div#slider-wrapper ul li:first').addClass('active');
 	$('main#home section#recent-projects div#slider-wrapper button#slider-prev').click(function() {
-		var $target = $('main#home section#projects div#slider-wrapper ul li.active').prev();
+		var $target = $('main#home section#recent-projects div#slider-wrapper ul li.active').prev();
 		toGalleryItem($target, maxScrollPosition);
 	});
 	$('main#home section#recent-projects div#slider-wrapper button#slider-next').click(function() {

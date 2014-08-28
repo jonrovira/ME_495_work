@@ -13,7 +13,7 @@ html {
     width: 100%; }
     html body #wrapper main {
       margin: 0 auto;
-      padding: 40px;
+      padding: 15px 40px;
       width: calc(65% - 80px);
       background-color: #fff;
       box-shadow: 6px 0px 10px -7px #888, -6px 0px 10px -7px #888; }
@@ -67,28 +67,30 @@ header {
         border-left: 1px solid #5b3b64; }
 
 /* Home */
-main#home section h2 {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 15px 0;
-  font-size: 25px; }
-main#home section button {
-  display: inline-block;
-  margin-left: 5px;
-  padding: 6px 10px;
-  color: #555;
-  font-size: 14px;
-  background-color: #fff;
-  border: 1px solid #777;
-  border-radius: 3px;
-  box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888;
-  cursor: pointer; }
-  main#home section button a {
+main#home section {
+  margin-bottom: 30px; }
+  main#home section > h2 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px 0;
+    font-size: 25px; }
+  main#home section button.see-all {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 6px 10px;
     color: #555;
-    text-decoration: none; }
-main#home section button:active {
-  position: relative;
-  top: 1px; }
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #777;
+    border-radius: 3px;
+    box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888;
+    cursor: pointer; }
+    main#home section button.see-all a {
+      color: #555;
+      text-decoration: none; }
+  main#home section button.see-all:active {
+    position: relative;
+    top: 1px; }
 main#home section#recent-projects {
   width: 100%; }
   main#home section#recent-projects div#slider-wrapper {
@@ -114,40 +116,57 @@ main#home section#recent-projects {
     main#home section#recent-projects div#slider-wrapper button {
       position: absolute;
       top: 50%;
-      margin-top: -10px;
-      cursor: pointer; }
+      margin-top: -40px;
+      width: 45px;
+      height: 90px;
+      background-color: #333;
+      border: none;
+      opacity: 0.7;
+      cursor: pointer;
+      outline: none; }
+      main#home section#recent-projects div#slider-wrapper button i {
+        font-size: 60px;
+        color: #777; }
+    main#home section#recent-projects div#slider-wrapper button:hover {
+      opacity: 0.9; }
     main#home section#recent-projects div#slider-wrapper button#slider-prev {
-      left: 10px; }
+      left: 0;
+      margin-left: -8px;
+      border-radius: 0 90px 90px 0; }
     main#home section#recent-projects div#slider-wrapper button#slider-next {
-      right: 10px; }
-main#home section#student-highlights {
+      right: 0;
+      margin-right: -8px;
+      border-radius: 90px 0 0 90px; }
+main#home section#students {
   width: 100%; }
-  main#home section#student-highlights ul {
-    margin-bottom: 20px; }
-    main#home section#student-highlights ul li {
+  main#home section#students ul li {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: calc(100% / 2 - 14px);
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+    main#home section#students ul li img {
       display: inline-block;
-      width: calc(100% / 4 - 20px);
-      border: 1px solid #aaa;
-      border-radius: 3px;
-      box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
-      main#home section#student-highlights ul li a {
+      margin-right: 20px;
+      width: 20%;
+      vertical-align: top; }
+    main#home section#students ul li div.student-info {
+      display: inline-block;
+      padding: 20px; }
+      main#home section#students ul li div.student-info > a {
         text-decoration: none; }
-        main#home section#student-highlights ul li a img {
-          width: 100%;
-          border-bottom: 1px solid #aaa; }
-        main#home section#student-highlights ul li a h2 {
-          padding: 10px 5px;
-          width: 100%;
-          text-align: center;
+        main#home section#students ul li div.student-info > a h2 {
+          margin-bottom: 5px;
           font-size: 14px; }
-    main#home section#student-highlights ul li:not(:first-child) {
-      margin-left: 20px; }
-    main#home section#student-highlights ul li:hover {
-      opacity: 0.8;
-      -webkit-transition: 0.2s;
-      -moz-transition: 0.2s;
-      -o-transition: 0.2s;
-      transition: 0.2s; }
+      main#home section#students ul li div.student-info > a:hover {
+        text-decoration: underline; }
+      main#home section#students ul li div.student-info h3 {
+        font-size: 13px; }
+        main#home section#students ul li div.student-info h3 a {
+          color: #333; }
+  main#home section#students ul li:nth-child(2n) {
+    margin-left: 20px; }
 
 /* Posts */
 article.post h3 {

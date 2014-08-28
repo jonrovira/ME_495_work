@@ -25,7 +25,7 @@ html {
 
 			main {
 				margin: 0 auto;
-				padding: 40px;
+				padding: 15px 40px;
 				width: calc(#{$inner-width} - 80px);
 				background-color: #fff;
 				box-shadow: 6px 0px 10px -7px #888,
@@ -112,13 +112,15 @@ header {
 main#home {
 
 	section {
-		h2 {
+		margin-bottom: 30px;
+
+		> h2 {
 			display: inline-block;
 			vertical-align: middle;
-			margin: 15px 0;
+			margin: 20px 0;
 			font-size: 25px;
 		}
-		button {
+		button.see-all {
 			display: inline-block;
 			margin-left: 5px;
 			padding: 6px 10px;
@@ -135,7 +137,7 @@ main#home {
 				text-decoration: none;
 			}
 		}
-		button:active {
+		button.see-all:active {
 			position: relative;
 			top: 1px;
 		}
@@ -176,54 +178,80 @@ main#home {
 			button {
 				position: absolute;
 				top: 50%;
-				margin-top: -10px;
+				margin-top: -40px;
+				width: 45px;
+				height: 90px;
+				background-color: #333;
+				border: none;
+				opacity: 0.7;
 				cursor: pointer;
+				outline: none;
+
+				i {
+					font-size: 60px;
+					color: #777;
+				}
+			}
+			button:hover {
+				opacity: 0.9;
 			}
 			button#slider-prev {
-				left: 10px;
+				left: 0;
+				margin-left: -8px;
+				border-radius: 0 90px 90px 0;
 			}
 			button#slider-next {
-				right: 10px;
+				right: 0;
+				margin-right: -8px;
+				border-radius: 90px 0 0 90px;
 			}
 		}
 	}
-	section#student-highlights {
+	section#students {
 		width: 100%;
 
 		ul {
-			margin-bottom: 20px;
 
 			li {
 				display: inline-block;
-				width: calc(100% / 4 - 20px);
+				margin-bottom: 20px;
+				width: calc(100% / 2 - 14px);
 				border: 1px solid #aaa;
 				border-radius: 3px;
 				box-shadow: $box-shadow;
 
-	            a {
-	            	text-decoration: none;
+	            img {
+	            	display: inline-block;
+	            	margin-right: 20px;
+	            	width: 20%;
+	            	vertical-align: top;
+	            }
+	            div.student-info {
+	            	display: inline-block;
+	            	padding: 20px;
 
-	            	img {
-	            		width: 100%;
-	            		border-bottom: 1px solid #aaa;
+	            	> a {
+	            		text-decoration: none;
+
+	            		h2 {
+	            			margin-bottom: 5px;
+	            			font-size: 14px;
+	            		}
 	            	}
-	            	h2 {
-	            		padding: 10px 5px;
-	            		width: 100%;
-	            		text-align: center;
-	            		font-size: 14px;
+	            	> a:hover {
+	            		text-decoration: underline;
+	            	}
+	            	h3 {
+	            		font-size: 13px;
+
+	            		a {
+	            			color: #333;
+	            		}
 	            	}
 	            }
 			}
-			li:not(:first-child) {
+			li:nth-child(2n) {
 				margin-left: 20px;
-			}
-			li:hover {
-				opacity: 0.8;
-				-webkit-transition: 0.2s;
-				-moz-transition: 0.2s;
-				-o-transition: 0.2s;
-				transition: 0.2s;
 			}
 		}
 	}
