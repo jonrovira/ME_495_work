@@ -11,7 +11,7 @@ url: index.html
 		<h2>People</h2>
 		<ul>
 			{% for person in site.people %}
-				<li>
+				<li id="{{ person.first_name }}-{{ person.last_name }}">
 					<img src="http://unsplash.it/500?random">
 					<div class="person-info">
 						<h2 class="person-name">{{ person.name }}</h2>
