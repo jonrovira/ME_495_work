@@ -12,7 +12,7 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
-  people:
+  students:
     output: false
   wiki:
     output: true

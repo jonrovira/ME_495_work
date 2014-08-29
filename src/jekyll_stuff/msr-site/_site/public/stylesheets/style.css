@@ -150,37 +150,37 @@ main#home section#recent-projects {
         margin-bottom: 5px; }
       main#home section#recent-projects div#slider-wrapper div#slider-info p {
         font-size: 14px; }
-main#home section#people {
+main#home section#students {
   width: 100%; }
-  main#home section#people ul li {
+  main#home section#students ul li {
     display: inline-block;
     margin-bottom: 20px;
     width: calc(100% / 2 - 15px);
     border: 1px solid #aaa;
     border-radius: 3px;
     box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
-    main#home section#people ul li img {
+    main#home section#students ul li img {
       display: inline-block;
       width: 20%;
       vertical-align: top; }
-    main#home section#people ul li div.person-info {
+    main#home section#students ul li div.student-info {
       display: inline-block;
       padding: 20px; }
-      main#home section#people ul li div.person-info > a {
+      main#home section#students ul li div.student-info > a {
         text-decoration: none;
         color: #333; }
-        main#home section#people ul li div.person-info > a h2 {
+        main#home section#students ul li div.student-info > a h2 {
           margin-bottom: 5px;
           font-size: 14px; }
-      main#home section#people ul li div.person-info > a:hover {
+      main#home section#students ul li div.student-info > a:hover {
         text-decoration: underline; }
-      main#home section#people ul li div.person-info h3 {
+      main#home section#students ul li div.student-info h3 {
         font-size: 13px; }
-        main#home section#people ul li div.person-info h3 a {
+        main#home section#students ul li div.student-info h3 a {
           color: #333; }
-  main#home section#people ul li:nth-child(2n) {
+  main#home section#students ul li:nth-child(2n) {
     margin-left: 20px; }
-  main#home section#people ul li:nth-child(3), main#home section#people ul li:nth-child(4) {
+  main#home section#students ul li:nth-child(3), main#home section#students ul li:nth-child(4) {
     margin-bottom: 0; }
 main#home section#recent-wiki ul {
   list-style: none; }
@@ -243,39 +243,52 @@ main#projects section#projects-list {
       margin-left: 20px; }
 
 /* People index */
-main#people section#people-list {
+main#students section#students-list {
   width: 100%; }
-  main#people section#people-list > h2 {
+  main#students section#students-list > h2 {
     margin: 20px 0;
     font-size: 25px; }
-  main#people section#people-list ul {
+  main#students section#students-list ul {
     width: 100%;
     list-style: none; }
-    main#people section#people-list ul li {
+    main#students section#students-list ul li {
       width: 100%;
       margin-bottom: 20px;
       border: 1px solid #aaa;
       border-radius: 3px;
       box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
-      main#people section#people-list ul li img {
+      main#students section#students-list ul li img {
         display: inline-block;
-        width: 25%;
+        width: 15%;
         vertical-align: top; }
-      main#people section#people-list ul li div.person-info {
+      main#students section#students-list ul li div.student-info {
         display: inline-block;
         padding: 15px;
         width: 70%; }
-        main#people section#people-list ul li div.person-info h2.person-name {
+        main#students section#students-list ul li div.student-info h2.student-name {
           font-size: 16px; }
-        main#people section#people-list ul li div.person-info h3.person-focuses {
+        main#students section#students-list ul li div.student-info h3.student-focuses {
           font-size: 14px; }
-        main#people section#people-list ul li div.person-info h3.person-website {
+        main#students section#students-list ul li div.student-info h3.student-website {
           font-size: 14px; }
-          main#people section#people-list ul li div.person-info h3.person-website a {
+          main#students section#students-list ul li div.student-info h3.student-website a {
             color: #333; }
-        main#people section#people-list ul li div.person-info p.person-summary {
-          margin: 20px 0;
+        main#students section#students-list ul li div.student-info p.student-summary {
+          margin: 8px 0;
           font-size: 14px; }
+
+/* Wiki index */
+main#wiki section#wikis-list {
+  width: 100%; }
+  main#wiki section#wikis-list > h2 {
+    margin: 20px 0;
+    font-size: 25px; }
+  main#wiki section#wikis-list ul {
+    width: 100%;
+    list-style: none; }
+    main#wiki section#wikis-list ul li a {
+      text-decoration: none;
+      color: #3c7fff; }
 
 /* Posts */
 main.project article {

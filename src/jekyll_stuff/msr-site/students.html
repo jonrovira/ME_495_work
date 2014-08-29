@@ -1,0 +1,27 @@
+---
+layout: default
+title: Students
+path: /students
+url: index.html
+---
+
+<main id="students">
+
+	<section id="students-list">
+		<h2>Students</h2>
+		<ul>
+			{% for student in site.students %}
+				<li id="{{ student.first_name }}-{{ student.last_name }}">
+					<img src="http://unsplash.it/500?random">
+					<div class="student-info">
+						<h2 class="student-name">{{ student.name }}</h2>
+						<h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
+						<h3 class="student-website">Website: <a href="{{ student.website }}">{{ student.website }}</a></h3>
+						<p class="student-summary">{{ student.summary }}</p>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+
+</main>

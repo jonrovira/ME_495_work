@@ -93,7 +93,6 @@ header {
 					text-align: center;
 					text-decoration: none;
 					font-size: 15px;
-					// font-weight: bold;
 					color: #fff;
 				}
 			}
@@ -225,7 +224,7 @@ main#home {
 			}
 		}
 	}
-	section#people {
+	section#students {
 		width: 100%;
 
 		ul {
@@ -243,7 +242,7 @@ main#home {
 	            	width: 20%;
 	            	vertical-align: top;
 	            }
-	            div.person-info {
+	            div.student-info {
 	            	display: inline-block;
 	            	padding: 20px;
 
@@ -378,9 +377,9 @@ main#projects {
 
 
 /* People index */
-main#people {
+main#students {
 
-	section#people-list {
+	section#students-list {
 		width: 100%;
 
 		> h2 {
@@ -400,31 +399,58 @@ main#people {
 
 				img {
 					display: inline-block;
-					width: 25%;
+					width: 15%;
 					vertical-align: top;
 				}
-				div.person-info {
+				div.student-info {
 					display: inline-block;
 					padding: 15px;
 					width: 70%;
 
-					h2.person-name {
+					h2.student-name {
 						font-size: 16px;
 					}
-					h3.person-focuses {
+					h3.student-focuses {
 						font-size: 14px;
 					}
-					h3.person-website {
+					h3.student-website {
 						font-size: 14px;
 
 						a {
 							color: #333;
 						}
 					}
-					p.person-summary {
-						margin: 20px 0;
+					p.student-summary {
+						margin: 8px 0;
 						font-size: 14px;
 					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* Wiki index */
+main#wiki {
+
+	section#wikis-list {
+		width: 100%;
+
+		> h2 {
+			margin: 20px 0;
+			font-size: 25px;
+		}
+		ul {
+			width: 100%;
+			list-style: none;
+
+			li {
+				
+				a {
+					text-decoration: none;
+					color: #3c7fff;
 				}
 			}
 		}
@@ -551,6 +577,7 @@ main.project {
 		}
 	}
 }
+
 
 
 /* Footer */

@@ -31,17 +31,17 @@ title: Home
 	
 	<hr>
 
-	<section id="people">
-		<h2>People</h2>
-		<button class="see-all"><a href="{{ site.baseurl }}/people/">See all</a></button>
+	<section id="students">
+		<h2>Students</h2>
+		<button class="see-all"><a href="{{ site.baseurl }}/students/">See all</a></button>
 		<ul>
-			{% for person in site.people limit: 4 %}
+			{% for student in site.students limit: 4 %}
 				<li>
 					<img src="http://unsplash.it/200?random">
-					<div class="person-info">
-						<a href="{{ site.baseurl }}/people/#{{ person.first_name }}-{{ person.last_name }}"><h2>{{ person.name }}</h2></a>
-						<h3>Focuses: {{ person.focus }}</h3>
-						<h3>Website: <a href="{{ person.website }}">{{ person.website }}</a></h3>
+					<div class="student-info">
+						<a href="{{ site.baseurl }}/students/#{{ student.first_name }}-{{ student.last_name }}"><h2>{{ student.name }}</h2></a>
+						<h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
+						<h3 class="student-website">Website: <a target="_blank" href="{{ student.website }}">{{ student.website }}</a></h3>
 					</div>
 				</li>
 			{% endfor %}
