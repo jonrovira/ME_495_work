@@ -25,7 +25,7 @@ html {
 
 			main {
 				margin: 0 auto;
-				padding: 15px 40px;
+				padding: 15px 40px 25px 40px;
 				width: calc(#{$inner-width} - 80px);
 				background-color: #fff;
 				box-shadow: 6px 0px 10px -7px #888,
@@ -233,7 +233,7 @@ main#home {
 			li {
 				display: inline-block;
 				margin-bottom: 20px;
-				width: calc(100% / 2 - 14px);
+				width: calc(100% / 2 - 15px);
 				border: 1px solid #aaa;
 				border-radius: 3px;
 				box-shadow: $box-shadow;
@@ -309,7 +309,7 @@ main#home {
 						font-size: 14px;
 					}
 					p.wiki-content {
-						margin: 20px 0 30px 0;
+						margin: 20px 0;
 						font-size: 14px;
 					}
 				}
@@ -321,6 +321,62 @@ main#home {
 		height: 1px;
 		border: 0;
 		box-shadow: inset 0 6px 6px -6px #999;
+	}
+}
+
+
+
+/* People index */
+main#people {
+
+	section#people-list {
+		width: 100%;
+
+		> h2 {
+			margin: 20px 0;
+			font-size: 25px;
+		}
+		ul {
+			width: 100%;
+			list-style: none;
+
+			li {
+				width: 100%;
+				margin-bottom: 20px;
+				border: 1px solid #aaa;
+				border-radius: 3px;
+				box-shadow: $box-shadow;
+
+				img {
+					display: inline-block;
+					width: 25%;
+					vertical-align: top;
+				}
+				div.person-info {
+					display: inline-block;
+					padding: 15px;
+					width: 70%;
+
+					h2.person-name {
+						font-size: 16px;
+					}
+					h3.person-focuses {
+						font-size: 14px;
+					}
+					h3.person-website {
+						font-size: 14px;
+
+						a {
+							color: #333;
+						}
+					}
+					p.person-summary {
+						margin: 20px 0;
+						font-size: 14px;
+					}
+				}
+			}
+		}
 	}
 }
 
