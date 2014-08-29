@@ -281,20 +281,25 @@ main#people section#people-list {
 main.project article {
   width: 100%; }
   main.project article section.project-header {
-    margin-bottom: 20px;
-    width: 100%; }
+    margin: 20px 0;
+    width: 100%;
+    overflow: auto; }
     main.project article section.project-header img.project-image {
-      display: inline-block;
+      float: right;
       width: 30%;
       vertical-align: top; }
     main.project article section.project-header div.project-header-info {
       display: inline-block;
-      padding: 20px;
       width: 65%; }
       main.project article section.project-header div.project-header-info h1.project-title {
-        margin-bottom: 15px;
+        margin: 0 !important;
         font-size: 29px; }
+      main.project article section.project-header div.project-header-info h2.project-author, main.project article section.project-header div.project-header-info h2.project-date {
+        font-size: 14px; }
+      main.project article section.project-header div.project-header-info h2.project-date {
+        margin-bottom: 20px; }
       main.project article section.project-header div.project-header-info a.project-demo {
+        margin-top: 20px;
         padding: 10px;
         line-height: 24px;
         text-decoration: none;
@@ -307,30 +312,48 @@ main.project article {
         color: #ffffff; }
         main.project article section.project-header div.project-header-info a.project-demo i {
           font-size: 25px; }
-  main.project article section.project-requirements {
+    main.project article section.project-header div.project-requirements {
+      margin: 40px 0;
+      padding: 15px;
+      width: 50%;
+      background-color: #bbceee;
+      border: 1px solid #9daab8;
+      border-radius: 3px; }
+      main.project article section.project-header div.project-requirements h2 {
+        margin-bottom: 10px; }
+      main.project article section.project-header div.project-requirements ul {
+        padding-left: 35px; }
+  main.project article section.project-overview {
     margin: 30px 0;
-    padding: 15px;
-    width: 60%;
-    background-color: #bbceee;
-    border: 1px solid #9daab8;
-    border-radius: 3px; }
-    main.project article section.project-requirements h2 {
-      margin-bottom: 10px; }
-    main.project article section.project-requirements ul {
+    width: 100%; }
+    main.project article section.project-overview h2 {
+      font-size: 30px; }
+  main.project article section.project-instructions {
+    margin: 30px 0; }
+    main.project article section.project-instructions h2 {
+      font-size: 30px; }
+    main.project article section.project-instructions ol {
       padding-left: 35px; }
-  main.project article .project-content .project-demo-instructions ol li {
-    margin: 0 0 10px 0; }
-    main.project article .project-content .project-demo-instructions ol li code {
-      display: block;
-      margin: 5px 0 0 0;
-      padding: 9px 10px;
-      background-color: #f3f57;
-      border: 1px solid #aebdcc;
-      border-radius: 4px;
-      font-family: Courier; }
-  main.project article .project-content .project-starts ul li a {
-    color: #426dff;
-    text-decoration: none; }
+      main.project article section.project-instructions ol li {
+        margin: 8px 0; }
+        main.project article section.project-instructions ol li code {
+          display: block;
+          margin-top: 5px;
+          padding: 9px 10px;
+          background-color: #f3f57;
+          border: 1px solid #aebdcc;
+          border-radius: 3px;
+          font-family: Courier; }
+  main.project article section.project-starts {
+    margin: 30px 0; }
+    main.project article section.project-starts h2 {
+      font-size: 30px; }
+    main.project article section.project-starts ul {
+      padding-left: 35px;
+      list-style: none; }
+      main.project article section.project-starts ul li a {
+        color: #426dff;
+        text-decoration: none; }
 
 /* Footer */
 footer {

@@ -37,111 +37,105 @@
 </header>
 
 			<main class="project">
-
 				<article>
 
 					<section class="project-header">
 						<div class="project-header-info">
 							<h1 class="project-title">Pick and Place Baxter Demo</h1>
-							<a class="project-demo" target="_blank" href="https://github.com/jonrovira/baxter_work">
+							<h2 class="project-author">Documented by Jarvis Schultz</h2>
+							<h2 class="project-date">August 29th, 2014</h2>
+							<a class="project-demo" target="_blank" href="https://github.com/jonrovira/ME_495_work">
 								<span>Check out the demo</span>
 								<i class="fa fa-github"></i>
 							</a>
 						</div>
 						<img class="project-image" src="http://unsplash.it/400?random">
+						<div class="project-requirements">
+							<h2>Requirements</h4>
+							<ul>
+								
+									<li>OpenCV ROS package (cv2 and CvBridge)</li>
+								
+									<li>Rethink Robotics Baxter robot</li>
+								
+									<li>Properly configured workspace for Baxter robot</li>
+								
+							</ul>
+						</div>
 					<section>
 
-					<section class="project-requirements">
-						<h2>Requirements</h4>
+					<section class="project-overview">
+						<h2>Overview</h2>
+						<p>Use OpenCV to detect an object in Baxter's workspace and implement motion and graps planning to manipulate one of Baxter's arms to grasp the object.</p>
+					</section>
+
+					<section class="project-instructions">
+						<h2>Get the demo up and running</h2>
+						<ol>
+							
+								
+									<li>
+										Make sure 'Enable Networking' is unchecked in the networking menu of your computer
+									</li>
+								
+
+							
+								
+									<li>
+										Ensure that Baxter's ethernet cable is connected to your computer
+									</li>
+								
+
+							
+								
+									<li>
+										Open up a terminal and run Avahi's network address configuration daemon
+										<code>$ sudo avahi-autoipd eth0</code>
+									</li>
+								
+
+							
+								
+									<li>
+										In a new terminal, run the Baxter setup script (assuming it's properly configured) that is located in the root directory of your ROS workspace
+										<code>$ ./baxter.sh</code>
+									</li>
+								
+
+							
+								
+									<li>
+										Run the demo
+										<code>$ roslaunch 'pkg_name' pick_and_place.launch</code>
+									</li>
+								
+
+							
+						</ol>
+					</section>
+
+					<section class="project-starts">
+						<h2>Great places to start</h2>
 						<ul>
 							
-								<li>OpenCV ROS package (cv2 and CvBridge)</li>
+								
+									<li>
+										<a href="opencv-srf.blogspot.ro/2010/09/object-detection-using-color-seperation.html">Thresholding images by color example</a>
+									</li>
+								
+
 							
-								<li>Rethink Robotics Baxter robot</li>
-							
-								<li>Properly configured workspace for Baxter robot</li>
+								
+									<li>
+										<a href="sdk.rethinkrobotics.com/wiki/Worked_Example_Visual_Servoing">Worked Example of Visual Servoing</a>
+									</li>
+								
+
 							
 						</ul>
 					</section>
 
-					<section class="project-overview">
-						<h3>Overview</h3>
-						<p>Use OpenCV to detect an object in Baxter's workspace and implement motion and graps planning to manipulate one of Baxter's arms to grasp the object.</p>
-					</section>
-
-					<section class="project-content">
-
-						<div class='project-demo-instructions'>
-							<h3>Get the demo up and running</h3>
-							<ol>
-								
-									
-										<li>
-											Make sure 'Enable Networking' is unchecked in the networking menu of your computer
-										</li>
-									
-
-								
-									
-										<li>
-											Ensure that Baxter's ethernet cable is connected to your computer
-										</li>
-									
-
-								
-									
-										<li>
-											Open up a terminal and run Avahi's network address configuration daemon
-											<code>$ sudo avahi-autoipd eth0</code>
-										</li>
-									
-
-								
-									
-										<li>
-											In a new terminal, run the Baxter setup script (assuming it's properly configured) that is located in the root directory of your ROS workspace
-											<code>$ ./baxter.sh</code>
-										</li>
-									
-
-								
-									
-										<li>
-											Run the demo
-											<code>$ roslaunch 'pkg_name' pick_and_place.launch</code>
-										</li>
-									
-
-								
-							</ol>
-						</div>
-
-						<div class="project-starts">
-							<h3>Great places to start</h3>
-							<ul>
-								
-									
-										<li>
-											<a href="opencv-srf.blogspot.ro/2010/09/object-detection-using-color-seperation.html">Thresholding images by color example</a>
-										</li>
-									
-
-								
-									
-										<li>
-											<a href="sdk.rethinkrobotics.com/wiki/Worked_Example_Visual_Servoing">Worked Example of Visual Servoing</a>
-										</li>
-									
-
-								
-							</ul>
-						</div>
-
-					</section>
-
-
 				</article>
-
 			</main>
 
 			<footer>

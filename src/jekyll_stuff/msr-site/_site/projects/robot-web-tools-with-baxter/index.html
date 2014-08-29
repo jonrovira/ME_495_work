@@ -37,154 +37,148 @@
 </header>
 
 			<main class="project">
-
 				<article>
 
 					<section class="project-header">
 						<div class="project-header-info">
 							<h1 class="project-title">Robot Web Tools with Baxter</h1>
+							<h2 class="project-author">Documented by Jarvis Schultz</h2>
+							<h2 class="project-date">August 29th, 2014</h2>
 							<a class="project-demo" target="_blank" href="https://github.com/jonrovira/robot_web_tools">
 								<span>Check out the demo</span>
 								<i class="fa fa-github"></i>
 							</a>
 						</div>
 						<img class="project-image" src="http://unsplash.it/400?random">
+						<div class="project-requirements">
+							<h2>Requirements</h4>
+							<ul>
+								
+									<li>ros-hydro-ros-base (basic ROS installation)</li>
+								
+									<li>ros-hydro-rosbridge-server (rosbridge_server)</li>
+								
+									<li>mjpeg_server</li>
+								
+									<li>Rethink Robotics Baxter robot</li>
+								
+									<li>Properly configured workspace for Baxter robot</li>
+								
+							</ul>
+						</div>
 					<section>
 
-					<section class="project-requirements">
-						<h2>Requirements</h4>
+					<section class="project-overview">
+						<h2>Overview</h2>
+						<p>Demonstrate the capabilities of Robot Web Tools, particularly when interfacing it with Rethink Robotics' Baxter robot. The included demo contains code to publish a simple message to a ROS Topic, stream one of Baxter's camera feeds, and control Baxter's left arm, al via a web browser.</p>
+					</section>
+
+					<section class="project-instructions">
+						<h2>Get the demo up and running</h2>
+						<ol>
+							
+								
+									<li>
+										Make sure 'Enable Networking' is unchecked in the networking menu of your computer
+									</li>
+								
+
+							
+								
+									<li>
+										Ensure that Baxter's ethernet cable is connected to your computer
+									</li>
+								
+
+							
+								
+									<li>
+										Open up a terminal and run Avahi's network address configuration daemon
+										<code>$ sudo avahi-autoipd eth0</code>
+									</li>
+								
+
+							
+								
+									<li>
+										In a new terminal, run the Baxter setup script (assuming it's properly configured) that is located in the root directory of your ROS workspace
+										<code>$ ./baxter.sh</code>
+									</li>
+								
+
+							
+								
+									<li>
+										Start roscore
+										<code>$ roscore</code>
+									</li>
+								
+
+							
+								
+									<li>
+										In a new terminal, launch a rosbridge server
+										<code>$ roslaunch rosbridge_server rosbridge_websocket.launch</code>
+									</li>
+								
+
+							
+								
+									<li>
+										In a new terminal, start a mjpeg server
+										<code>$ rosrun mjpeg_server mjpeg_server</code>
+									</li>
+								
+
+							
+								
+									<li>
+										In Google Chrome, navigate to the index html page from the demo repository
+										<code>file:///path/to/file/index.html</code>
+									</li>
+								
+
+							
+								
+									<li>
+										To see Baxter's left hand camera stream, in a new terminal, run the startcamera script
+										<code>$rosrun robot_web_tools startcamera.py</code>
+									</li>
+								
+
+							
+						</ol>
+					</section>
+
+					<section class="project-starts">
+						<h2>Great places to start</h2>
 						<ul>
 							
-								<li>ros-hydro-ros-base (basic ROS installation)</li>
+								
+									<li>
+										<a href="http://robotwebtools.org/">Robot Web Tools</a>
+									</li>
+								
+
 							
-								<li>ros-hydro-rosbridge-server (rosbridge_server)</li>
+								
+									<li>
+										<a href="http://wiki.ros.org/roslibjs/Tutorials/BasicRosFunctionality">Basic ROS functionality with roslibjs example</a>
+									</li>
+								
+
 							
-								<li>mjpeg_server</li>
-							
-								<li>Rethink Robotics Baxter robot</li>
-							
-								<li>Properly configured workspace for Baxter robot</li>
+								
+									<li>
+										<a href="http://wiki.ros.org/mjpegcanvasjs/Tutorials/CreatingASingleStreamCanvas">MJPEG Single stream canvas example</a>
+									</li>
+								
+
 							
 						</ul>
 					</section>
 
-					<section class="project-overview">
-						<h3>Overview</h3>
-						<p>Demonstrate the capabilities of Robot Web Tools, particularly when interfacing it with Rethink Robotics' Baxter robot. The included demo contains code to publish a simple message to a ROS Topic, stream one of Baxter's camera feeds, and control Baxter's left arm, al via a web browser.</p>
-					</section>
-
-					<section class="project-content">
-
-						<div class='project-demo-instructions'>
-							<h3>Get the demo up and running</h3>
-							<ol>
-								
-									
-										<li>
-											Make sure 'Enable Networking' is unchecked in the networking menu of your computer
-										</li>
-									
-
-								
-									
-										<li>
-											Ensure that Baxter's ethernet cable is connected to your computer
-										</li>
-									
-
-								
-									
-										<li>
-											Open up a terminal and run Avahi's network address configuration daemon
-											<code>$ sudo avahi-autoipd eth0</code>
-										</li>
-									
-
-								
-									
-										<li>
-											In a new terminal, run the Baxter setup script (assuming it's properly configured) that is located in the root directory of your ROS workspace
-											<code>$ ./baxter.sh</code>
-										</li>
-									
-
-								
-									
-										<li>
-											Start roscore
-											<code>$ roscore</code>
-										</li>
-									
-
-								
-									
-										<li>
-											In a new terminal, launch a rosbridge server
-											<code>$ roslaunch rosbridge_server rosbridge_websocket.launch</code>
-										</li>
-									
-
-								
-									
-										<li>
-											In a new terminal, start a mjpeg server
-											<code>$ rosrun mjpeg_server mjpeg_server</code>
-										</li>
-									
-
-								
-									
-										<li>
-											In Google Chrome, navigate to the index html page from the demo repository
-											<code>file:///path/to/file/index.html</code>
-										</li>
-									
-
-								
-									
-										<li>
-											To see Baxter's left hand camera stream, in a new terminal, run the startcamera script
-											<code>$rosrun robot_web_tools startcamera.py</code>
-										</li>
-									
-
-								
-							</ol>
-						</div>
-
-						<div class="project-starts">
-							<h3>Great places to start</h3>
-							<ul>
-								
-									
-										<li>
-											<a href="http://robotwebtools.org/">Robot Web Tools</a>
-										</li>
-									
-
-								
-									
-										<li>
-											<a href="http://wiki.ros.org/roslibjs/Tutorials/BasicRosFunctionality">Basic ROS functionality with roslibjs example</a>
-										</li>
-									
-
-								
-									
-										<li>
-											<a href="http://wiki.ros.org/mjpegcanvasjs/Tutorials/CreatingASingleStreamCanvas">MJPEG Single stream canvas example</a>
-										</li>
-									
-
-								
-							</ul>
-						</div>
-
-					</section>
-
-
 				</article>
-
 			</main>
 
 			<footer>

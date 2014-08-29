@@ -37,113 +37,107 @@
 </header>
 
 			<main class="project">
-
 				<article>
 
 					<section class="project-header">
 						<div class="project-header-info">
 							<h1 class="project-title">Baxter in Gazebo</h1>
-							<a class="project-demo" target="_blank" href="">
+							<h2 class="project-author">Documented by Jarvis Schultz</h2>
+							<h2 class="project-date">August 29th, 2014</h2>
+							<a class="project-demo" target="_blank" href="https://github.com/jonrovira/ME_495_work">
 								<span>Check out the demo</span>
 								<i class="fa fa-github"></i>
 							</a>
 						</div>
 						<img class="project-image" src="http://unsplash.it/400?random">
+						<div class="project-requirements">
+							<h2>Requirements</h4>
+							<ul>
+								
+									<li>python-wstool</li>
+								
+									<li>python-rosdep</li>
+								
+									<li>ros-hydro-pcl-conversions</li>
+								
+									<li>ros-hydro-control-msgs</li>
+								
+									<li>ros-hydro-cmake-modules</li>
+								
+									<li>ros-hydro-qt-build</li>
+								
+									<li>ros-hydro-moveit-full</li>
+								
+									<li>ros-hydro-driver-common</li>
+								
+									<li>ros-hydro-image-common</li>
+								
+									<li>ros-hydro-rostest-gazebo</li>
+								
+									<li>Baxter Simulation repository (must request access by emailing RSDK.support@rethinkrobotics.com</li>
+								
+							</ul>
+						</div>
 					<section>
 
-					<section class="project-requirements">
-						<h2>Requirements</h4>
+					<section class="project-overview">
+						<h2>Overview</h2>
+						<p>Learn how to quickly get a Baxter simulation running in Gazebo. Execute the joint position keyboard example in the simulation.</p>
+					</section>
+
+					<section class="project-instructions">
+						<h2>Get the demo up and running</h2>
+						<ol>
+							
+								
+									<li>
+										Complete the simulator installation instructions located at sdk.rethinkrobotics.com/wiki/Simulator_Installation
+									</li>
+								
+
+							
+								
+									<li>
+										Run the Baxter setup script located in the root of your workspace with the simulation parameter
+										<code>$ ./baxter.sh sim</code>
+									</li>
+								
+
+							
+								
+									<li>
+										Start the simulation with controllers
+										<code>$ roslaunch baxter_gazebo baxter_world.launch</code>
+									</li>
+								
+
+							
+								
+									<li>
+										In a new terminal, run the joint position keyboard example
+										<code>$ rosrun baxter_examples joint_position_keyboard.py</code>
+									</li>
+								
+
+							
+						</ol>
+					</section>
+
+					<section class="project-starts">
+						<h2>Great places to start</h2>
 						<ul>
 							
-								<li>python-wstool</li>
-							
-								<li>python-rosdep</li>
-							
-								<li>ros-hydro-pcl-conversions</li>
-							
-								<li>ros-hydro-control-msgs</li>
-							
-								<li>ros-hydro-cmake-modules</li>
-							
-								<li>ros-hydro-qt-build</li>
-							
-								<li>ros-hydro-moveit-full</li>
-							
-								<li>ros-hydro-driver-common</li>
-							
-								<li>ros-hydro-image-common</li>
-							
-								<li>ros-hydro-rostest-gazebo</li>
-							
-								<li>Baxter Simulation repository (must request access by emailing RSDK.support@rethinkrobotics.com</li>
+								
+									<li>
+										<a href="sdk.rethinkrobotics.com//wiki/Simulator_Installation">Baxter Simulation Installation</a>
+									</li>
+								
+
 							
 						</ul>
 					</section>
 
-					<section class="project-overview">
-						<h3>Overview</h3>
-						<p>Learn how to quickly get a Baxter simulation running in Gazebo. Execute the joint position keyboard example in the simulation.</p>
-					</section>
-
-					<section class="project-content">
-
-						<div class='project-demo-instructions'>
-							<h3>Get the demo up and running</h3>
-							<ol>
-								
-									
-										<li>
-											Complete the simulator installation instructions located at sdk.rethinkrobotics.com/wiki/Simulator_Installation
-										</li>
-									
-
-								
-									
-										<li>
-											Run the Baxter setup script located in the root of your workspace with the simulation parameter
-											<code>$ ./baxter.sh sim</code>
-										</li>
-									
-
-								
-									
-										<li>
-											Start the simulation with controllers
-											<code>$ roslaunch baxter_gazebo baxter_world.launch</code>
-										</li>
-									
-
-								
-									
-										<li>
-											In a new terminal, run the joint position keyboard example
-											<code>$ rosrun baxter_examples joint_position_keyboard.py</code>
-										</li>
-									
-
-								
-							</ol>
-						</div>
-
-						<div class="project-starts">
-							<h3>Great places to start</h3>
-							<ul>
-								
-									
-										<li>
-											<a href="sdk.rethinkrobotics.com//wiki/Simulator_Installation">Baxter Simulation Installation</a>
-										</li>
-									
-
-								
-							</ul>
-						</div>
-
-					</section>
-
-
 				</article>
-
 			</main>
 
 			<footer>

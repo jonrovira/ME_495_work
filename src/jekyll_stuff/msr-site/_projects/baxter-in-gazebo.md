@@ -2,7 +2,9 @@
 layout:             project
 image:              /baxter-in-gazebo2.png
 title:              Baxter in Gazebo
-demo:               ""
+author:             Jarvis Schultz
+date:               August 29th, 2014
+demo:               https://github.com/jonrovira/ME_495_work
 requirements:       [python-wstool,
                     python-rosdep,
                     ros-hydro-pcl-conversions,
