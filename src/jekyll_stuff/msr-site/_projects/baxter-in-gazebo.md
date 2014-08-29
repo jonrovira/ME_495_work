@@ -24,7 +24,7 @@ demo-instructions:  ["Complete the simulator installation instructions located a
                     ["Start the simulation with controllers", "$ roslaunch baxter_gazebo baxter_world.launch"],
                     ["In a new terminal, run the joint position keyboard example", "$ rosrun baxter_examples joint_position_keyboard.py"]]
 places-to-start:    [["Baxter Simulation Installation",
-                    "sdk.rethinkrobotics.com//wiki/Simulator_Installation"]]
+                    "http://sdk.rethinkrobotics.com//wiki/Simulator_Installation"]]
 ---
 
 

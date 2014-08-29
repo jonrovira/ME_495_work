@@ -17,6 +17,6 @@ demo-instructions: ["Make sure 'Enable Networking' is unchecked in the networkin
                    ["In a new terminal, run the Baxter setup script (assuming it's properly configured) that is located in the root directory of your ROS workspace", "$ ./baxter.sh"],
                    ["Run the demo", "$ roslaunch 'pkg_name' pick_and_place.launch"]]
 places-to-start:   [["Thresholding images by color example",
-                   "opencv-srf.blogspot.ro/2010/09/object-detection-using-color-seperation.html"],
-                   ["Worked Example of Visual Servoing", "sdk.rethinkrobotics.com/wiki/Worked_Example_Visual_Servoing"]]
+                   "http://opencv-srf.blogspot.ro/2010/09/object-detection-using-color-seperation.html"],
+                   ["Worked Example of Visual Servoing", "http://sdk.rethinkrobotics.com/wiki/Worked_Example_Visual_Servoing"]]
 ---           
