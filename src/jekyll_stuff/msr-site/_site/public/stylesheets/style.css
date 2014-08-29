@@ -211,6 +211,37 @@ main#home hr {
   border: 0;
   box-shadow: inset 0 6px 6px -6px #999; }
 
+/* Projects index */
+main#projects section#projects-list {
+  width: 100%; }
+  main#projects section#projects-list > h2 {
+    margin: 20px 0;
+    font-size: 25px; }
+  main#projects section#projects-list ul {
+    list-style: none; }
+    main#projects section#projects-list ul li {
+      display: inline-block;
+      margin-bottom: 20px;
+      width: calc(100% / 3 - 20px);
+      height: 450px;
+      vertical-align: top;
+      border: 1px solid #aaa;
+      border-radius: 3px;
+      box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
+      main#projects section#projects-list ul li a {
+        text-decoration: none; }
+        main#projects section#projects-list ul li a img {
+          width: 100%; }
+        main#projects section#projects-list ul li a div.project-info {
+          padding: 15px; }
+          main#projects section#projects-list ul li a div.project-info h2.project-title {
+            margin-bottom: 5px;
+            font-size: 16px; }
+          main#projects section#projects-list ul li a div.project-info p.project-overview {
+            font-size: 14px; }
+    main#projects section#projects-list ul li:nth-child(3n), main#projects section#projects-list ul li:nth-child(3n-1) {
+      margin-left: 20px; }
+
 /* People index */
 main#people section#people-list {
   width: 100%; }
@@ -247,53 +278,59 @@ main#people section#people-list {
           font-size: 14px; }
 
 /* Posts */
-article.post h3 {
-  margin: 35px 0 0 0; }
-article.post .post-heading {
-  overflow: auto; }
-  article.post .post-heading .featured-image {
-    float: left;
-    width: 300px;
-    margin: 0 50px 0 0; }
-  article.post .post-heading .post-title {
-    margin: 0 0 15px 0;
-    font-size: 29px; }
-  article.post .post-heading .post-demo {
-    padding: 10px 16px;
-    line-height: 24px;
-    text-decoration: none;
-    background-color: #60b044;
-    background-image: mox-linear-gradient(#8add6d, #60b044);
-    background-image: linear-gradient(#8add6d, #60b044);
-    background-repeat: repeat-x;
-    border: 1px solid #5ca941;
-    border-radius: 3px;
-    color: #ffffff; }
-    article.post .post-heading .post-demo i {
-      font-size: 25px; }
-  article.post .post-heading .post-requirements h4 {
-    margin: 25px 0 10px 0; }
-  article.post .post-heading .post-requirements ul {
-    float: left;
-    margin: 0;
-    padding: 15px 15px 15px 40px;
-    width: 270px;
+main.project article {
+  width: 100%; }
+  main.project article section.project-header {
+    margin-bottom: 20px;
+    width: 100%; }
+    main.project article section.project-header img.project-image {
+      display: inline-block;
+      width: 30%;
+      vertical-align: top; }
+    main.project article section.project-header div.project-header-info {
+      display: inline-block;
+      padding: 20px;
+      width: 65%; }
+      main.project article section.project-header div.project-header-info h1.project-title {
+        margin-bottom: 15px;
+        font-size: 29px; }
+      main.project article section.project-header div.project-header-info a.project-demo {
+        padding: 10px;
+        line-height: 24px;
+        text-decoration: none;
+        background-color: #60b044;
+        background-image: mox-linear-gradient(#8add6d, #60b044);
+        background-image: linear-gradient(#8add6d, #60b044);
+        background-repeat: repeat-x;
+        border: 1px solid #5ca941;
+        border-radius: 3px;
+        color: #ffffff; }
+        main.project article section.project-header div.project-header-info a.project-demo i {
+          font-size: 25px; }
+  main.project article section.project-requirements {
+    margin: 30px 0;
+    padding: 15px;
+    width: 60%;
     background-color: #bbceee;
     border: 1px solid #9daab8;
     border-radius: 3px; }
-article.post .post-content .post-demo-instructions ol li {
-  margin: 0 0 10px 0; }
-  article.post .post-content .post-demo-instructions ol li code {
-    display: block;
-    margin: 5px 0 0 0;
-    padding: 9px 10px;
-    background-color: #f3f57;
-    border: 1px solid #aebdcc;
-    border-radius: 4px;
-    font-family: Courier; }
-article.post .post-content .post-starts ul li a {
-  color: #426dff;
-  text-decoration: none; }
+    main.project article section.project-requirements h2 {
+      margin-bottom: 10px; }
+    main.project article section.project-requirements ul {
+      padding-left: 35px; }
+  main.project article .project-content .project-demo-instructions ol li {
+    margin: 0 0 10px 0; }
+    main.project article .project-content .project-demo-instructions ol li code {
+      display: block;
+      margin: 5px 0 0 0;
+      padding: 9px 10px;
+      background-color: #f3f57;
+      border: 1px solid #aebdcc;
+      border-radius: 4px;
+      font-family: Courier; }
+  main.project article .project-content .project-starts ul li a {
+    color: #426dff;
+    text-decoration: none; }
 
 /* Footer */
 footer {

@@ -10,12 +10,12 @@ title: Home
 		<button class="see-all"><a href="{{ site.baseurl }}/projects/">See all</a></button>
 		<div id="slider-wrapper">
 			<ul>
-				{% for post in site.posts limit: 4 %}
+				{% for project in site.projects limit: 4 %}
 					<li>
-						<a href="{{ site.baseurl }}{{ post.url }}">
+						<a href="{{ site.baseurl }}{{ project.url }}">
 							<img src="http://unsplash.it/1130/400?random">
-							<h2>{{ post.title }}</h2>
-							<p>{{ post.overview | truncatewords: 18 }}</p>
+							<h2>{{ project.title }}</h2>
+							<p>{{ project.overview | truncatewords: 18 }}</p>
 						</a>
 					</li>
 				{% endfor %}

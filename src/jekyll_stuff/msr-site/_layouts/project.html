@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+
+	<body>
+
+		<div id="wrapper">
+
+			{% include header.html %}
+
+			<main class="project">
+
+				<article>
+
+					<section class="project-header">
+						<div class="project-header-info">
+							<h1 class="project-title">{{ page.title }}</h1>
+							<a class="project-demo" target="_blank" href="{{ page.demo }}">
+								<span>Check out the demo</span>
+								<i class="fa fa-github"></i>
+							</a>
+						</div>
+						<img class="project-image" src="http://unsplash.it/400?random">
+					<section>
+
+					<section class="project-requirements">
+						<h2>Requirements</h4>
+						<ul>
+							{% for req in page.requirements %}
+								<li>{{ req }}</li>
+							{% endfor %}
+						</ul>
+					</section>
+
+					<section class="project-overview">
+						<h3>Overview</h3>
+						<p>{{ page.overview }}</p>
+					</section>
+
+					<section class="project-content">
+
+						<div class='project-demo-instructions'>
+							<h3>Get the demo up and running</h3>
+							<ol>
+								{% for step in page.demo-instructions %}
+									{% if step[1] %}
+										<li>
+											{{ step[0] }}
+											<code>{{ step[1] }}</code>
+										</li>
+									{% else %}
+										<li>
+											{{ step }}
+										</li>
+									{% endif %}
+
+								{% endfor %}
+							</ol>
+						</div>
+
+						<div class="project-starts">
+							<h3>Great places to start</h3>
+							<ul>
+								{% for place in page.places-to-start %}
+									{% if place[1] %}
+										<li>
+											<a href="{{ place[1] }}">{{ place[0] }}</a>
+										</li>
+									{% else %}
+										<li>
+											{{ place }}
+										</li>
+									{% endif %}
+
+								{% endfor %}
+							</ul>
+						</div>
+
+					</section>
+
+
+				</article>
+
+			</main>
+
+			{% include footer.html %}
+
+		</div>
+
+	</body>
+</html>

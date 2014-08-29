@@ -13,8 +13,7 @@ collections:
     output: true
     permalink: /projects/:path/
   people:
-    output: true
-    permalink: /people/:path/
+    output: false
   wiki:
     output: true
     permalink: /wiki/:path/

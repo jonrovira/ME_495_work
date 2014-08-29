@@ -1,5 +1,5 @@
 ---
-layout:            post
+layout:            project
 image:             /baxter-pick-place2.jpg
 title:             Pick and Place Baxter Demo
 demo:              https://github.com/jonrovira/baxter_work

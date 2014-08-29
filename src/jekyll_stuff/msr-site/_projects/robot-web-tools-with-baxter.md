@@ -1,5 +1,5 @@
 ---
-layout:             post
+layout:             project
 image:              /robot-web-tools.jpg
 title:              Robot Web Tools with Baxter
 demo:               https://github.com/jonrovira/robot_web_tools

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+
+	<title>ME 495 - Embedded Systems in Robotics</title>
+
+	<link rel="icon" type="image/png" href="/msr-site/public/images/nu-logo.png">
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/msr-site/public/stylesheets/style.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="/msr-site/public/javascripts/script.js"></script>
+</head>
+
+	<body>
+
+		<div id="wrapper">
+
+			<header>
+	<div id="header-branding">
+		<div id="header-branding-inner">
+			<img src="/msr-site/public/images/nu-logo.png">
+			<h2>Master of Science in Robotics</h2>
+		</div>
+	</div>
+
+	<nav id="header-navigation">
+		<ul>
+			<li><a href="/msr-site/">HOME</a></li>
+			<li><a href="/msr-site/projects/">PROJECTS</a></li>
+			<li><a href="/msr-site/people/">PEOPLE</a></li>
+			<li><a href="/msr-site/#">WIKI</a></li>
+		</ul>
+	</nav>
+</header>
+
+			<main class="project">
+
+				<article>
+
+					<section class="project-header">
+						<div class="project-header-info">
+							<h1 class="project-title">Robot Web Tools with Baxter</h1>
+							<a class="project-demo" target="_blank" href="https://github.com/jonrovira/robot_web_tools">
+								<span>Check out the demo</span>
+								<i class="fa fa-github"></i>
+							</a>
+						</div>
+						<img class="project-image" src="http://unsplash.it/400?random">
+					<section>
+
+					<section class="project-requirements">
+						<h2>Requirements</h4>
+						<ul>
+							
+								<li>ros-hydro-ros-base (basic ROS installation)</li>
+							
+								<li>ros-hydro-rosbridge-server (rosbridge_server)</li>
+							
+								<li>mjpeg_server</li>
+							
+								<li>Rethink Robotics Baxter robot</li>
+							
+								<li>Properly configured workspace for Baxter robot</li>
+							
+						</ul>
+					</section>
+
+					<section class="project-overview">
+						<h3>Overview</h3>
+						<p>Demonstrate the capabilities of Robot Web Tools, particularly when interfacing it with Rethink Robotics' Baxter robot. The included demo contains code to publish a simple message to a ROS Topic, stream one of Baxter's camera feeds, and control Baxter's left arm, al via a web browser.</p>
+					</section>
+
+					<section class="project-content">
+
+						<div class='project-demo-instructions'>
+							<h3>Get the demo up and running</h3>
+							<ol>
+								
+									
+										<li>
+											Make sure 'Enable Networking' is unchecked in the networking menu of your computer
+										</li>
+									
+
+								
+									
+										<li>
+											Ensure that Baxter's ethernet cable is connected to your computer
+										</li>
+									
+
+								
+									
+										<li>
+											Open up a terminal and run Avahi's network address configuration daemon
+											<code>$ sudo avahi-autoipd eth0</code>
+										</li>
+									
+
+								
+									
+										<li>
+											In a new terminal, run the Baxter setup script (assuming it's properly configured) that is located in the root directory of your ROS workspace
+											<code>$ ./baxter.sh</code>
+										</li>
+									
+
+								
+									
+										<li>
+											Start roscore
+											<code>$ roscore</code>
+										</li>
+									
+
+								
+									
+										<li>
+											In a new terminal, launch a rosbridge server
+											<code>$ roslaunch rosbridge_server rosbridge_websocket.launch</code>
+										</li>
+									
+
+								
+									
+										<li>
+											In a new terminal, start a mjpeg server
+											<code>$ rosrun mjpeg_server mjpeg_server</code>
+										</li>
+									
+
+								
+									
+										<li>
+											In Google Chrome, navigate to the index html page from the demo repository
+											<code>file:///path/to/file/index.html</code>
+										</li>
+									
+
+								
+									
+										<li>
+											To see Baxter's left hand camera stream, in a new terminal, run the startcamera script
+											<code>$rosrun robot_web_tools startcamera.py</code>
+										</li>
+									
+
+								
+							</ol>
+						</div>
+
+						<div class="project-starts">
+							<h3>Great places to start</h3>
+							<ul>
+								
+									
+										<li>
+											<a href="http://robotwebtools.org/">Robot Web Tools</a>
+										</li>
+									
+
+								
+									
+										<li>
+											<a href="http://wiki.ros.org/roslibjs/Tutorials/BasicRosFunctionality">Basic ROS functionality with roslibjs example</a>
+										</li>
+									
+
+								
+									
+										<li>
+											<a href="http://wiki.ros.org/mjpegcanvasjs/Tutorials/CreatingASingleStreamCanvas">MJPEG Single stream canvas example</a>
+										</li>
+									
+
+								
+							</ul>
+						</div>
+
+					</section>
+
+
+				</article>
+
+			</main>
+
+			<footer>
+	<ul>
+		<li>Northwestern Universiy Tech B230, 2145 Sheridan Road, Evanston, IL</li>
+		<li>(847) 123-12345</li>
+		<li>contact-msr@northwestern.edu</li>
+	</ul>
+</footer>
+
+		</div>
+
+	</body>
+</html>

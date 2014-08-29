@@ -1,5 +1,5 @@
 ---
-layout:             post
+layout:             project
 image:              /baxter-in-gazebo2.png
 title:              Baxter in Gazebo
 demo:               ""
