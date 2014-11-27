@@ -14,6 +14,8 @@ collections:
     permalink: /projects/:path/
   students:
     output: false
-  wiki:
+    years: [2011, 2012, 2013, 2014]
+  resources:
     output: true
-    permalink: /wiki/:path/
+    permalink: /resources/:path/
+    tags: [navigation, manipulation, vision, perception, artificial intelligence, haptics, natural language processing, actuation, sensing, locomotion, human-robot interaction, autonomy, dynamics, kinematics, control loops, trajectory planning, interpolation, inverse kinematics, forward kinematics, jacobian matrix, optimization, algorithms, machining, assembly, ROS, linux, matlab, c++, python, probabilistic data structures, search, programming]

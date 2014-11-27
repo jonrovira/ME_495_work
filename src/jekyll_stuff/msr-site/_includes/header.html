@@ -10,8 +10,20 @@
 		<ul>
 			<li><a href="{{ site.baseurl }}/">HOME</a></li>
 			<li><a href="{{ site.baseurl }}/projects/">PROJECTS</a></li>
-			<li><a href="{{ site.baseurl }}/students/">STUDENTS</a></li>
-			<li><a href="{{ site.baseurl }}/wiki/">WIKI</a></li>
+			<li>
+				<a href="{{ site.baseurl }}/students/">STUDENTS</a>
+				<ul>
+					<li>
+						<a href="{{ site.baseurl }}/students/?class_year=all">All</a>
+					</li>
+					{% for year in site.collections.students.years %}
+						<li>
+							<a href="{{ site.baseurl }}/students/?class_year={{ year }}">{{ year }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</li>
+			<li><a href="{{ site.baseurl }}/resources/">RESOURCES</a></li>
 		</ul>
 	</nav>
 </header>

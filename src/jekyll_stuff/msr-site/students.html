@@ -7,14 +7,29 @@ url: index.html
 
 <main id="students">
 
-	<section id="students-list">
+	<section id="class-select">
 		<h2>Students</h2>
+		<h3>Class year</h3>
+		<ul id="class-select-list">
+			<li>
+				<button value="all">All</button>
+			</li>
+			{% for year in site.collections.students.years %}
+				<li>
+					<button value="{{ year }}">{{ year }}</button>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+
+	<section id="students-list">
 		<ul>
 			{% for student in site.students %}
-				<li id="{{ student.first_name }}-{{ student.last_name }}">
+				<li id="{{ student.first_name }}-{{ student.last_name }}" class="class-year-{{ student.class_year }}">
 					<img src="http://unsplash.it/500?random">
 					<div class="student-info">
 						<h2 class="student-name">{{ student.name }}</h2>
+						<h3 class="student-year">Class of {{ student.class_year }}</h3>
 						<h3 class="student-focuses">Focuses: {{ student.focus }}</h3>
 						<h3 class="student-website">Website: <a href="{{ student.website }}">{{ student.website }}</a></h3>
 						<p class="student-summary">{{ student.summary }}</p>

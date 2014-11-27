@@ -5,13 +5,14 @@
 
 	<title>ME 495 - Embedded Systems in Robotics</title>
 
-	<link rel="icon" type="image/png" href="/msr-site/public/images/nu-logo.png">
+	<link rel="icon" type="image/png" href="/msr-site/public/images/favicon.png">
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/msr-site/public/stylesheets/style.css">
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="/msr-site/public/javascripts/script.js"></script>
+	
 </head>
 
 	<body>
@@ -30,8 +31,32 @@
 		<ul>
 			<li><a href="/msr-site/">HOME</a></li>
 			<li><a href="/msr-site/projects/">PROJECTS</a></li>
-			<li><a href="/msr-site/students/">STUDENTS</a></li>
-			<li><a href="/msr-site/wiki/">WIKI</a></li>
+			<li>
+				<a href="/msr-site/students/">STUDENTS</a>
+				<ul>
+					<li>
+						<a href="/msr-site/students/?class_year=all">All</a>
+					</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2011">2011</a>
+						</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2012">2012</a>
+						</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2013">2013</a>
+						</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2014">2014</a>
+						</li>
+					
+				</ul>
+			</li>
+			<li><a href="/msr-site/resources/">RESOURCES</a></li>
 		</ul>
 	</nav>
 </header>
@@ -82,13 +107,24 @@
 
 	<section id="students">
 		<h2>Students</h2>
-		<button class="see-all"><a href="/msr-site/students/">See all</a></button>
+		<button class="see-all"><a href="/msr-site/students/?class_year=all">See all</a></button>
 		<ul>
 			
 				<li>
 					<img src="http://unsplash.it/200?random">
 					<div class="student-info">
+						<a href="/msr-site/students/#Todd-Murphey"><h2>Todd Murphey</h2></a>
+						<h3>Class of 2011</h3>
+						<h3 class="student-focuses">Focuses: neuroscience, robotics</h3>
+						<h3 class="student-website">Website: <a target="_blank" href="http://google.com">http://google.com</a></h3>
+					</div>
+				</li>
+			
+				<li>
+					<img src="http://unsplash.it/200?random">
+					<div class="student-info">
 						<a href="/msr-site/students/#Jarvis-Schultz"><h2>Jarvis Schultz</h2></a>
+						<h3>Class of 2012</h3>
 						<h3 class="student-focuses">Focuses: neuroscience, robotics</h3>
 						<h3 class="student-website">Website: <a target="_blank" href="http://google.com">http://google.com</a></h3>
 					</div>
@@ -98,6 +134,7 @@
 					<img src="http://unsplash.it/200?random">
 					<div class="student-info">
 						<a href="/msr-site/students/#Jon-Rovira"><h2>Jon Rovira</h2></a>
+						<h3>Class of 2013</h3>
 						<h3 class="student-focuses">Focuses: neuroscience, robotics</h3>
 						<h3 class="student-website">Website: <a target="_blank" href="http://google.com">http://google.com</a></h3>
 					</div>
@@ -107,15 +144,7 @@
 					<img src="http://unsplash.it/200?random">
 					<div class="student-info">
 						<a href="/msr-site/students/#Kevin-Lynch"><h2>Kevin Lynch</h2></a>
-						<h3 class="student-focuses">Focuses: neuroscience, robotics</h3>
-						<h3 class="student-website">Website: <a target="_blank" href="http://google.com">http://google.com</a></h3>
-					</div>
-				</li>
-			
-				<li>
-					<img src="http://unsplash.it/200?random">
-					<div class="student-info">
-						<a href="/msr-site/students/#Todd-Murphey"><h2>Todd Murphey</h2></a>
+						<h3>Class of 2014</h3>
 						<h3 class="student-focuses">Focuses: neuroscience, robotics</h3>
 						<h3 class="student-website">Website: <a target="_blank" href="http://google.com">http://google.com</a></h3>
 					</div>
@@ -126,28 +155,27 @@
 
 	<hr>
 
-	<section id="recent-wiki">
-		<h2>Recent Wiki Post</h2>
-		<button class="see-all"><a href="/msr-site/wiki/">Go to Wiki</a></button>
-		<ul>
+	<section id="recent-resource">
+		<h2>Recent Resources Post</h2>
+		<button class="see-all"><a href="/msr-site/resources/">Go to Resources</a></button>
+		<div id="resource-content">
 			
-				<li>
-					<a href="/msr-site/wiki/baxter/">
-						<img src="http://unsplash.it/350?random">
-						<div class="wiki-info">
-							<h3 class="wiki-date">August 8th, 2014</h3>
-							<h2 class="wiki-title">Rapidly Exploring Random Tree (RTT)</h2>
-							<h3 class="wiki-author">Written by John Smith</h3>
-							<h4 class="wiki-tags">Tags: algorithms, probabilistic data structures, search</h4>
-							<p class="wiki-content">Lorem ipsum dolor sit amet, te rebum nonumes sapientem sit. Ex per tempor dicunt. Te electram intellegat mel. Mei odio utinam interpretaris at, ex pro facilisis maluisset philosophia, his id nibh numquam adipiscing. Ne duo persius omittam explicari, decore euripidis eloquentiam an sit, vis eu graeci causae vocibus. Sit tantas vocibus pertinax ei, est ferri disputationi et, cum eu omnesque fabellas. Partem option expetendis te eum, at sint regione salutatus mei. Ferri detraxit voluptatibus ius te, possit nostrum mnesarchum et mei, sed eu erant phaedrum reformidans. Id per dicant dolore docendi, nam eu ullum zril offendit, posse accumsan qui ex. Id fugit tollit pertinacia nam. Ex illud maiestatis incorrupte mea. Eu cum sensibus necessitatibus, ad partem dictas mel, est ut justo graeci consetetur. Eam et duis reque dicam, mei recteque posidonium ex. Est hinc ignota nemore te, nullam nonumes referrentur est cu. An mea autem iriure apeirian, ad vim malis...</p>
-						</div>
-					</a>
-				</li>
+				<a href="/msr-site/resources/2014-09-17-rtt/">
+					<img src="http://unsplash.it/350?random">
+					<div class="resource-info">
+						<h3 class="resource-date">August 8th, 2014</h3>
+						<h2 class="resource-title">Rapidly Exploring Random Tree (RTT)</h2>
+						<h3 class="resource-author">Written by John Smith</h3>
+						<h4 class="resource-tags">Tags: algorithmsprobabilistic data structuressearch</h4>
+						<p class="resource-content">## Overview Lorem ipsum dolor sit amet, te rebum nonumes sapientem sit. Ex per tempor dicunt. Te electram intellegat mel. Mei odio utinam interpretaris at, ex pro facilisis maluisset philosophia, his id nibh numquam adipiscing. Ne duo persius omittam explicari, decore euripidis eloquentiam an sit, vis eu graeci causae vocibus. Sit tantas vocibus pertinax ei, est ferri disputationi et, cum eu omnesque fabellas. Partem option expetendis te eum, at sint regione salutatus mei. ### Topic 1 Ferri detraxit voluptatibus ius te, possit nostrum mnesarchum et mei, sed eu erant phaedrum reformidans. Id per dicant dolore docendi, nam eu ullum zril offendit, posse accumsan qui ex. Id fugit tollit pertinacia nam. Ex illud maiestatis incorrupte mea. Eu cum sensibus necessitatibus, ad partem dictas mel, est ut justo graeci consetetur. ### Topic 2 Eam et duis reque dicam, mei recteque posidonium ex. Est hinc ignota nemore te, nullam nonumes referrentur est cu....</p>
+					</div>
+				</a>
 			
-		</ul>
+		</div>
 	</section>
 
 </main>
+
 
 			<footer>
 	<ul>

@@ -18,13 +18,14 @@ requirements:       [python-wstool,
                     Baxter Simulation repository (must request access by emailing RSDK.support@rethinkrobotics.com]
 overview:           Learn how to quickly get a Baxter simulation running in Gazebo.
                     Execute the joint position keyboard example in the simulation.
-demo-instructions:  ["Complete the simulator installation instructions located at
-                    sdk.rethinkrobotics.com/wiki/Simulator_Installation",
-                    ["Run the Baxter setup script located in the root of your workspace with the simulation parameter", "$ ./baxter.sh sim"],
-                    ["Start the simulation with controllers", "$ roslaunch baxter_gazebo baxter_world.launch"],
-                    ["In a new terminal, run the joint position keyboard example", "$ rosrun baxter_examples joint_position_keyboard.py"]]
-places-to-start:    [["Baxter Simulation Installation",
-                    "http://sdk.rethinkrobotics.com//wiki/Simulator_Installation"]]
 ---
 
 
+### Topic 1
+Lorem ipsum dolor sit amet, te rebum nonumes sapientem sit. Ex per tempor dicunt. Te electram intellegat mel. Mei odio utinam interpretaris at, ex pro facilisis maluisset philosophia, his id nibh numquam adipiscing. Ne duo persius omittam explicari, decore euripidis eloquentiam an sit, vis eu graeci causae vocibus. Sit tantas vocibus pertinax ei, est ferri disputationi et, cum eu omnesque fabellas. Partem option expetendis te eum, at sint regione salutatus mei.
+
+### Topic 2
+Ferri detraxit voluptatibus ius te, possit nostrum mnesarchum et mei, sed eu erant phaedrum reformidans. Id per dicant dolore docendi, nam eu ullum zril offendit, posse accumsan qui ex. Id fugit tollit pertinacia nam. Ex illud maiestatis incorrupte mea. Eu cum sensibus necessitatibus, ad partem dictas mel, est ut justo graeci consetetur.
+
+### Topic 3
+Eam et duis reque dicam, mei recteque posidonium ex. Est hinc ignota nemore te, nullam nonumes referrentur est cu. An mea autem iriure apeirian, ad vim malis semper expetendis. Habemus repudiare ut vis, et invidunt signiferumque qui. An eos nisl magna veniam, periculis consulatu reformidans mea no. Eu aperiam prompta elaboraret his, quis discere cu usu, cu vix impetus accumsan.

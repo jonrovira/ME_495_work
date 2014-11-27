@@ -5,13 +5,14 @@
 
 	<title>ME 495 - Embedded Systems in Robotics</title>
 
-	<link rel="icon" type="image/png" href="/msr-site/public/images/nu-logo.png">
+	<link rel="icon" type="image/png" href="/msr-site/public/images/favicon.png">
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/msr-site/public/stylesheets/style.css">
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="/msr-site/public/javascripts/script.js"></script>
+	
 </head>
 
 	<body>
@@ -30,8 +31,32 @@
 		<ul>
 			<li><a href="/msr-site/">HOME</a></li>
 			<li><a href="/msr-site/projects/">PROJECTS</a></li>
-			<li><a href="/msr-site/students/">STUDENTS</a></li>
-			<li><a href="/msr-site/wiki/">WIKI</a></li>
+			<li>
+				<a href="/msr-site/students/">STUDENTS</a>
+				<ul>
+					<li>
+						<a href="/msr-site/students/?class_year=all">All</a>
+					</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2011">2011</a>
+						</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2012">2012</a>
+						</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2013">2013</a>
+						</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2014">2014</a>
+						</li>
+					
+				</ul>
+			</li>
+			<li><a href="/msr-site/resources/">RESOURCES</a></li>
 		</ul>
 	</nav>
 </header>
@@ -62,77 +87,18 @@
 								
 							</ul>
 						</div>
-					<section>
+					</section>
 
 					<section class="project-overview">
 						<h2>Overview</h2>
 						<p>Use OpenCV to detect an object in Baxter's workspace and implement motion and graps planning to manipulate one of Baxter's arms to grasp the object.</p>
 					</section>
 
-					<section class="project-instructions">
-						<h2>Get the demo up and running</h2>
-						<ol>
-							
-								
-									<li>
-										Make sure 'Enable Networking' is unchecked in the networking menu of your computer
-									</li>
-								
+					<section class="project-content">
+						
+						
 
-							
-								
-									<li>
-										Ensure that Baxter's ethernet cable is connected to your computer
-									</li>
-								
 
-							
-								
-									<li>
-										Open up a terminal and run Avahi's network address configuration daemon
-										<code>$ sudo avahi-autoipd eth0</code>
-									</li>
-								
-
-							
-								
-									<li>
-										In a new terminal, run the Baxter setup script (assuming it's properly configured) that is located in the root directory of your ROS workspace
-										<code>$ ./baxter.sh</code>
-									</li>
-								
-
-							
-								
-									<li>
-										Run the demo
-										<code>$ roslaunch 'pkg_name' pick_and_place.launch</code>
-									</li>
-								
-
-							
-						</ol>
-					</section>
-
-					<section class="project-starts">
-						<h2>Great places to start</h2>
-						<ul>
-							
-								
-									<li>
-										<a href="http://opencv-srf.blogspot.ro/2010/09/object-detection-using-color-seperation.html">Thresholding images by color example</a>
-									</li>
-								
-
-							
-								
-									<li>
-										<a href="http://sdk.rethinkrobotics.com/wiki/Worked_Example_Visual_Servoing">Worked Example of Visual Servoing</a>
-									</li>
-								
-
-							
-						</ul>
 					</section>
 
 				</article>

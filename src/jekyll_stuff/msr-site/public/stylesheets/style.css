@@ -10,7 +10,88 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   background: url("../images/brushed/brushed.png"); }
   html body #wrapper {
-    width: 100%; }
+    width: 100%;
+    /* Header */
+    /* General main */
+    /* Home */
+    /* Projects index */
+    /* People index */
+    /* Resources index */
+    /* Resource */
+    /* Posts */
+    /* Footer */ }
+    html body #wrapper header {
+      width: 100%; }
+      html body #wrapper header div#header-branding {
+        background: -webkit-linear-gradient(left, #490459, #490459, #823292, #490459);
+        background: -moz-linear-gradient(right, #490459, #490459, #823292, #490459);
+        background: linear-gradient(to right, #490459, #490459, #823292, #490459); }
+        html body #wrapper header div#header-branding div#header-branding-inner {
+          margin: 0 auto;
+          padding: 20px 0;
+          width: 90%; }
+          html body #wrapper header div#header-branding div#header-branding-inner img {
+            display: inline-block;
+            margin-right: 20px;
+            width: 80px; }
+          html body #wrapper header div#header-branding div#header-branding-inner h2 {
+            display: inline-block;
+            width: calc(100% - 105px);
+            color: #fff;
+            font-size: 18px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+      @media (min-width: 321px) {
+        html body #wrapper header div#header-branding div#header-branding-inner {
+          width: 65%; }
+          html body #wrapper header div#header-branding div#header-branding-inner img {
+            margin-right: 70px;
+            width: auto; }
+          html body #wrapper header div#header-branding div#header-branding-inner h2 {
+            margin-left: 110px;
+            width: auto;
+            font-size: 35px;
+            line-height: 140px;
+            vertical-align: top; } }
+      html body #wrapper header nav#header-navigation {
+        background-color: #31043f; }
+        html body #wrapper header nav#header-navigation > ul {
+          margin: 0 auto;
+          width: 65%;
+          list-style: none; }
+          html body #wrapper header nav#header-navigation > ul > li {
+            position: relative;
+            display: inline-block;
+            width: calc(100% / 4 - 5px);
+            border-right: 1px solid #5b3b64; }
+            html body #wrapper header nav#header-navigation > ul > li > a {
+              display: block;
+              padding: 11px 0;
+              text-align: center;
+              text-decoration: none;
+              font-size: 15px;
+              color: #fff; }
+            html body #wrapper header nav#header-navigation > ul > li ul {
+              display: none;
+              position: absolute;
+              top: 39px;
+              left: -5px;
+              z-index: 1;
+              width: calc(100% + 6px);
+              text-align: center;
+              list-style: none;
+              background-color: #31043f; }
+              html body #wrapper header nav#header-navigation > ul > li ul li a {
+                display: block;
+                padding: 5px 0;
+                color: #fff;
+                text-decoration: none;
+                font-size: 13px; }
+              html body #wrapper header nav#header-navigation > ul > li ul li:last-child {
+                padding-bottom: 5px; }
+          html body #wrapper header nav#header-navigation > ul > li:first-child {
+            border-left: 1px solid #5b3b64; }
+          html body #wrapper header nav#header-navigation > ul > li:hover ul {
+            display: block; }
     html body #wrapper main {
       margin: 0 auto;
       padding: 15px 40px 25px 40px;
@@ -20,369 +101,481 @@ html {
       html body #wrapper main h1 {
         margin-bottom: 20px;
         font-size: 45px; }
+    html body #wrapper main#home section {
+      margin-bottom: 30px; }
+      html body #wrapper main#home section > h2 {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 20px 0;
+        font-size: 25px; }
+      html body #wrapper main#home section button.see-all {
+        display: inline-block;
+        margin-left: 5px;
+        padding: 6px 10px;
+        color: #555;
+        font-size: 14px;
+        background-color: #fff;
+        border: 1px solid #777;
+        border-radius: 3px;
+        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
+        cursor: pointer;
+        outline: none; }
+        html body #wrapper main#home section button.see-all a {
+          color: #555;
+          text-decoration: none; }
+      html body #wrapper main#home section button.see-all:active {
+        position: relative;
+        top: 1px; }
+    html body #wrapper main#home section#recent-projects {
+      width: 100%; }
+      html body #wrapper main#home section#recent-projects div#slider-wrapper {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper ul {
+          position: relative;
+          top: 0;
+          left: 0;
+          list-style: none; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper ul li {
+            float: left; }
+            html body #wrapper main#home section#recent-projects div#slider-wrapper ul li a {
+              position: relative; }
+              html body #wrapper main#home section#recent-projects div#slider-wrapper ul li a img {
+                display: block; }
+              html body #wrapper main#home section#recent-projects div#slider-wrapper ul li a h2, html body #wrapper main#home section#recent-projects div#slider-wrapper ul li a p {
+                display: none; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper button {
+          position: absolute;
+          top: 50%;
+          margin-top: -40px;
+          width: 45px;
+          height: 90px;
+          background-color: #333;
+          border: none;
+          opacity: 0.7;
+          cursor: pointer;
+          outline: none; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper button i {
+            font-size: 60px;
+            color: #777; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper button:hover {
+          opacity: 0.9; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper button#slider-prev {
+          left: 0;
+          margin-left: -8px;
+          border-radius: 0 90px 90px 0; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper button#slider-next {
+          right: 0;
+          margin-right: -8px;
+          border-radius: 90px 0 0 90px; }
+        html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info {
+          position: absolute;
+          bottom: 0;
+          padding: 20px;
+          width: calc(100% - 40px);
+          height: 55px;
+          background-color: #444;
+          opacity: 0.8; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info h2, html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
+            color: #fff; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info h2 {
+            margin-bottom: 5px; }
+          html body #wrapper main#home section#recent-projects div#slider-wrapper div#slider-info p {
+            font-size: 14px; }
+    html body #wrapper main#home section#students {
+      width: 100%; }
+      html body #wrapper main#home section#students ul li {
+        display: inline-block;
+        margin-bottom: 20px;
+        width: calc(100% / 2 - 15px);
+        border: 1px solid #aaa;
+        border-radius: 3px;
+        box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
+        html body #wrapper main#home section#students ul li img {
+          display: inline-block;
+          width: 26%;
+          vertical-align: top; }
+        html body #wrapper main#home section#students ul li div.student-info {
+          display: inline-block;
+          padding: 20px; }
+          html body #wrapper main#home section#students ul li div.student-info > a {
+            text-decoration: none;
+            color: #333; }
+            html body #wrapper main#home section#students ul li div.student-info > a h2 {
+              margin-bottom: 5px;
+              font-size: 14px; }
+          html body #wrapper main#home section#students ul li div.student-info > a:hover {
+            text-decoration: underline; }
+          html body #wrapper main#home section#students ul li div.student-info h3 {
+            font-size: 13px; }
+            html body #wrapper main#home section#students ul li div.student-info h3 a {
+              color: #333; }
+      html body #wrapper main#home section#students ul li:nth-child(2n) {
+        margin-left: 20px; }
+      html body #wrapper main#home section#students ul li:nth-child(3), html body #wrapper main#home section#students ul li:nth-child(4) {
+        margin-bottom: 0; }
+    html body #wrapper main#home section#recent-resource div#resource-content a {
+      display: block;
+      text-decoration: none; }
+      html body #wrapper main#home section#recent-resource div#resource-content a img {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top; }
+      html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info {
+        position: relative;
+        padding: 0 0 0 20px;
+        width: 65%;
+        display: inline-block; }
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-date {
+          font-size: 14px;
+          margin-bottom: 10px; }
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h3.resource-author {
+          font-size: 14px;
+          font-weight: normal; }
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info h4.resource-tags {
+          font-weight: normal;
+          font-size: 14px; }
+        html body #wrapper main#home section#recent-resource div#resource-content a div.resource-info p.resource-content {
+          margin: 20px 0;
+          font-size: 14px; }
+    html body #wrapper main#home hr {
+      margin: 50px 0 30px 0;
+      height: 1px;
+      border: 0;
+      box-shadow: inset 0 6px 6px -6px #999; }
+    html body #wrapper main#projects section#projects-list {
+      width: 100%; }
+      html body #wrapper main#projects section#projects-list > h2 {
+        margin: 20px 0;
+        font-size: 25px; }
+      html body #wrapper main#projects section#projects-list ul {
+        list-style: none; }
+        html body #wrapper main#projects section#projects-list ul li {
+          display: inline-block;
+          margin-bottom: 20px;
+          width: calc(100% / 3 - 20px);
+          height: 390px;
+          vertical-align: top;
+          border: 1px solid #aaa;
+          border-radius: 3px;
+          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
+          html body #wrapper main#projects section#projects-list ul li a {
+            text-decoration: none; }
+            html body #wrapper main#projects section#projects-list ul li a img {
+              width: 100%; }
+            html body #wrapper main#projects section#projects-list ul li a div.project-info {
+              padding: 15px; }
+              html body #wrapper main#projects section#projects-list ul li a div.project-info h2.project-title {
+                margin-bottom: 5px;
+                font-size: 16px; }
+              html body #wrapper main#projects section#projects-list ul li a div.project-info p.project-overview {
+                font-size: 14px; }
+        html body #wrapper main#projects section#projects-list ul li:nth-child(3n), html body #wrapper main#projects section#projects-list ul li:nth-child(3n-1) {
+          margin-left: 20px; }
+    html body #wrapper main#students section#class-select > h2 {
+      margin: 20px 0;
+      font-size: 25px; }
+    html body #wrapper main#students section#class-select > h3 {
+      font-size: 16px; }
+    html body #wrapper main#students section#class-select ul#class-select-list {
+      margin-top: 5px; }
+      html body #wrapper main#students section#class-select ul#class-select-list li {
+        display: inline-block;
+        margin-left: 5px; }
+        html body #wrapper main#students section#class-select ul#class-select-list li button {
+          padding: 6px 10px;
+          color: #555;
+          font-size: 14px;
+          background-color: #fff;
+          border: 1px solid #777;
+          border-radius: 3px;
+          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888;
+          cursor: pointer;
+          outline: none; }
+      html body #wrapper main#students section#class-select ul#class-select-list li:first-child {
+        margin: 0; }
+      html body #wrapper main#students section#class-select ul#class-select-list li.active button {
+        color: #fff;
+        background-color: #18A9FF;
+        border: none; }
+    html body #wrapper main#students section#students-list {
+      margin-top: 20px;
+      width: 100%; }
+      html body #wrapper main#students section#students-list ul {
+        width: 100%;
+        list-style: none; }
+        html body #wrapper main#students section#students-list ul li {
+          display: none;
+          width: 100%;
+          margin-bottom: 20px;
+          border: 1px solid #aaa;
+          border-radius: 3px;
+          box-shadow: 6px 0px 7px -7px #888, 0px 6px 7px -7px #888; }
+          html body #wrapper main#students section#students-list ul li img {
+            display: inline-block;
+            width: 20%;
+            vertical-align: top; }
+          html body #wrapper main#students section#students-list ul li div.student-info {
+            display: inline-block;
+            padding: 15px;
+            width: 75%; }
+            html body #wrapper main#students section#students-list ul li div.student-info h2.student-name {
+              font-size: 16px; }
+            html body #wrapper main#students section#students-list ul li div.student-info h3.student-year {
+              font-size: 14px; }
+            html body #wrapper main#students section#students-list ul li div.student-info h3.student-focuses {
+              font-size: 14px; }
+            html body #wrapper main#students section#students-list ul li div.student-info h3.student-website {
+              font-size: 14px; }
+              html body #wrapper main#students section#students-list ul li div.student-info h3.student-website a {
+                color: #333; }
+            html body #wrapper main#students section#students-list ul li div.student-info p.student-summary {
+              margin: 7px 0;
+              font-size: 13px; }
+    html body #wrapper main#resources {
+      overflow: auto; }
+      html body #wrapper main#resources section#tags-list {
+        float: right;
+        margin-top: 20px;
+        width: 200px;
+        text-align: right;
+        overflow: auto; }
+        html body #wrapper main#resources section#tags-list > h2 {
+          font-size: 18px; }
+        html body #wrapper main#resources section#tags-list ul {
+          display: none;
+          margin-top: 6px;
+          list-style: none; }
+          html body #wrapper main#resources section#tags-list ul li {
+            color: #3c7fff;
+            font-size: 14px;
+            cursor: pointer; }
+          html body #wrapper main#resources section#tags-list ul li.clicked {
+            color: #777;
+            font-size: 15px; }
+      html body #wrapper main#resources section#resources-search > h2 {
+        margin: 20px 0;
+        font-size: 25px; }
+      html body #wrapper main#resources section#resources-search form {
+        overflow: auto;
+        margin-bottom: 20px;
+        width: 409px; }
+        html body #wrapper main#resources section#resources-search form input#search-bar {
+          float: left;
+          padding: 10px 8px;
+          width: 280px;
+          height: 20px;
+          font-style: bold;
+          font-size: 15px;
+          background-color: #eee;
+          border: none;
+          outline: none; }
+        html body #wrapper main#resources section#resources-search form input#search-bar:focus {
+          background-color: #fff;
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.8) inset; }
+        html body #wrapper main#resources section#resources-search form input#search-bar::-webkit-input-placeholder {
+          color: #666;
+          font-weight: normal;
+          font-style: italic; }
+        html body #wrapper main#resources section#resources-search form input#search-bar:-moz-placeholder {
+          color: #666;
+          font-weight: normal;
+          font-style: italic; }
+        html body #wrapper main#resources section#resources-search form input#search-bar:-ms-input-placeholder {
+          color: #666;
+          font-weight: normal;
+          font-style: italic; }
+        html body #wrapper main#resources section#resources-search form button.search-button {
+          float: left;
+          position: relative;
+          height: 40px;
+          font-style: bold;
+          font-size: 14px/40px;
+          color: #fff;
+          text-transform: uppercase;
+          text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+          background-color: #60a5fa;
+          border: none;
+          cursor: pointer;
+          outline: none; }
+        html body #wrapper main#resources section#resources-search form button.search-button:hover {
+          background-color: #7DBAFA; }
+        html body #wrapper main#resources section#resources-search form button.search-button:active, html body #wrapper main#resources section#resources-search form button:focus {
+          background-color: #4484FA; }
+        html body #wrapper main#resources section#resources-search form button.search-button::-moz-focus-inner {
+          border: none;
+          padding: 0; }
+        html body #wrapper main#resources section#resources-search form button#search-submit {
+          width: 110px;
+          border-radius: 0 3px 3px 0; }
+        html body #wrapper main#resources section#resources-search form button#search-submit:before {
+          content: '';
+          position: absolute;
+          top: 12px;
+          left: -6px;
+          border-width: 8px;
+          border-style: solid solid solid none;
+          border-color: transparent #60A5FA transparent; }
+        html body #wrapper main#resources section#resources-search form button#search-submit:hover:before {
+          border-right-color: #7DBAFA; }
+        html body #wrapper main#resources section#resources-search form button#search-submit:focus:before, html body #wrapper main#resources section#resources-search form button#search-submit:active:before {
+          border-right-color: #4484FA; }
+      html body #wrapper main#resources section#resources-list {
+        width: 100%; }
+        html body #wrapper main#resources section#resources-list > ul {
+          width: calc(100% - 250px);
+          list-style: none; }
+          html body #wrapper main#resources section#resources-list > ul > li {
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px; }
+            html body #wrapper main#resources section#resources-list > ul > li a {
+              text-decoration: none;
+              color: inherit; }
+              html body #wrapper main#resources section#resources-list > ul > li a h2.resource-date {
+                float: right;
+                font-size: 14px;
+                font-weight: normal;
+                color: #555; }
+              html body #wrapper main#resources section#resources-list > ul > li a h1.resource-title {
+                margin-bottom: 3px;
+                font-size: 15px; }
+              html body #wrapper main#resources section#resources-list > ul > li a span {
+                display: inline-block;
+                margin-top: 5px;
+                font-size: 14px;
+                font-style: italic;
+                color: #555; }
+              html body #wrapper main#resources section#resources-list > ul > li a ul.resource-tags-list {
+                display: inline-block; }
+                html body #wrapper main#resources section#resources-list > ul > li a ul.resource-tags-list li.resource-tag {
+                  display: inline-block;
+                  margin-top: 5px;
+                  font-size: 14px;
+                  font-style: italic;
+                  color: #555; }
+                html body #wrapper main#resources section#resources-list > ul > li a ul.resource-tags-list li.resource-tag:not(:last-child):after {
+                  content: ','; }
+              html body #wrapper main#resources section#resources-list > ul > li a div.resource-content {
+                display: none; }
+          html body #wrapper main#resources section#resources-list > ul li.hidden-by-search, html body #wrapper main#resources section#resources-list > ul li.hidden-by-tags {
+            display: none; }
+    html body #wrapper main.resource h1 {
+      margin: 0.67em 0;
+      font-size: 2em; }
+    html body #wrapper main.resource h2 {
+      margin: 0.75em 0; }
+    html body #wrapper main.resource h3 {
+      margin: 0.83em 0; }
+    html body #wrapper main.resource h3, html body #wrapper main.resource p, html body #wrapper main.resource ul, html body #wrapper main.resource form, html body #wrapper main.resource ol {
+      margin: 1.12em 0; }
+    html body #wrapper main.resource h5 {
+      margin: 1.5em 0; }
+    html body #wrapper main.resource h6 {
+      margin: 1.67em 0; }
+    html body #wrapper main.resource ol, html body #wrapper main.resource ul {
+      margin-left: 40px; }
+    html body #wrapper main.resource h1.resource-title {
+      margin-bottom: 0; }
+    html body #wrapper main.resource h2.resource-author {
+      margin: 0.2em 0 0 0;
+      font-size: 1.00em;
+      color: #444; }
+    html body #wrapper main.resource h3.resource-date {
+      margin: 0.2em 0 0 0;
+      font-size: 1.00em;
+      color: #444; }
+    html body #wrapper main.resource h4.resource-tags {
+      margin-top: 0.2em;
+      font-size: 0.95em;
+      color: #555; }
+    html body #wrapper main.project article {
+      width: 100%; }
+      html body #wrapper main.project article section.project-header {
+        margin: 20px 0;
+        width: 100%;
+        overflow: auto; }
+        html body #wrapper main.project article section.project-header img.project-image {
+          float: right;
+          width: 30%;
+          vertical-align: top; }
+        html body #wrapper main.project article section.project-header div.project-header-info {
+          display: inline-block;
+          width: 65%; }
+          html body #wrapper main.project article section.project-header div.project-header-info h1.project-title {
+            margin: 0 !important;
+            font-size: 29px; }
+          html body #wrapper main.project article section.project-header div.project-header-info h2.project-author, html body #wrapper main.project article section.project-header div.project-header-info h2.project-date {
+            font-size: 14px; }
+          html body #wrapper main.project article section.project-header div.project-header-info h2.project-date {
+            margin-bottom: 20px; }
+          html body #wrapper main.project article section.project-header div.project-header-info a.project-demo {
+            margin-top: 20px;
+            padding: 10px;
+            line-height: 24px;
+            text-decoration: none;
+            background-color: #60b044;
+            background-image: mox-linear-gradient(#8add6d, #60b044);
+            background-image: linear-gradient(#8add6d, #60b044);
+            background-repeat: repeat-x;
+            border: 1px solid #5ca941;
+            border-radius: 3px;
+            color: #ffffff; }
+            html body #wrapper main.project article section.project-header div.project-header-info a.project-demo i {
+              font-size: 25px; }
+        html body #wrapper main.project article section.project-header div.project-requirements {
+          margin: 40px 0;
+          padding: 15px;
+          width: 50%;
+          background-color: #bbceee;
+          border: 1px solid #9daab8;
+          border-radius: 3px; }
+          html body #wrapper main.project article section.project-header div.project-requirements h2 {
+            margin-bottom: 10px; }
+          html body #wrapper main.project article section.project-header div.project-requirements ul {
+            padding-left: 35px; }
+      html body #wrapper main.project article section.project-overview {
+        margin: 30px 0;
+        width: 100%; }
+        html body #wrapper main.project article section.project-overview h2 {
+          font-size: 30px; }
+      html body #wrapper main.project article section.project-content h1 {
+        margin: 0.67em 0;
+        font-size: 2em; }
+      html body #wrapper main.project article section.project-content h2 {
+        margin: 0.75em 0; }
+      html body #wrapper main.project article section.project-content h3 {
+        margin: 0.83em 0; }
+      html body #wrapper main.project article section.project-content h3, html body #wrapper main.project article section.project-content p, html body #wrapper main.project article section.project-content ul, html body #wrapper main.project article section.project-content form, html body #wrapper main.project article section.project-content ol {
+        margin: 1.12em 0; }
+      html body #wrapper main.project article section.project-content h5 {
+        margin: 1.5em 0; }
+      html body #wrapper main.project article section.project-content h6 {
+        margin: 1.67em 0; }
+      html body #wrapper main.project article section.project-content ol, html body #wrapper main.project article section.project-content ul {
+        margin-left: 40px; }
+    html body #wrapper footer {
+      width: 100%;
+      background-color: #31043F; }
+      html body #wrapper footer ul {
+        margin: 0 auto;
+        padding: 15px 0;
+        width: 65%;
+        list-style: none;
+        text-align: center; }
+        html body #wrapper footer ul li {
+          padding: 0 5px;
+          display: inline-block;
+          color: #fff;
+          font-size: 14px;
+          border-right: 1px solid #5b3b64; }
+        html body #wrapper footer ul li:last-child {
+          border: none; }
     html body #wrapper h1, html body #wrapper h2, html body #wrapper h3, html body #wrapper h4, html body #wrapper p {
       color: #333; }
 
-/* Header */
-header {
-  width: 100%; }
-  header div#header-branding {
-    background: -webkit-linear-gradient(left, #490459, #490459, #823292, #490459);
-    background: -moz-linear-gradient(right, #490459, #490459, #823292, #490459);
-    background: linear-gradient(to right, #490459, #490459, #823292, #490459); }
-    header div#header-branding div#header-branding-inner {
-      margin: 0 auto;
-      padding: 20px 0;
-      width: 65%; }
-      header div#header-branding div#header-branding-inner img {
-        display: inline-block;
-        margin: 0 70px 0 0; }
-      header div#header-branding div#header-branding-inner h2 {
-        display: inline-block;
-        margin-left: 110px;
-        color: #ffffff;
-        font-size: 35px;
-        line-height: 140px;
-        vertical-align: top;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
-  header nav#header-navigation {
-    background-color: #31043f; }
-    header nav#header-navigation ul {
-      margin: 0 auto;
-      width: 65%;
-      list-style: none; }
-      header nav#header-navigation ul li {
-        display: inline-block;
-        width: calc(100% / 4 - 5px);
-        border-right: 1px solid #5b3b64; }
-        header nav#header-navigation ul li a {
-          display: block;
-          padding: 11px 0;
-          text-align: center;
-          text-decoration: none;
-          font-size: 15px;
-          color: #fff; }
-      header nav#header-navigation ul li:first-child {
-        border-left: 1px solid #5b3b64; }
-
-/* Home */
-main#home section {
-  margin-bottom: 30px; }
-  main#home section > h2 {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 20px 0;
-    font-size: 25px; }
-  main#home section button.see-all {
-    display: inline-block;
-    margin-left: 5px;
-    padding: 6px 10px;
-    color: #555;
-    font-size: 14px;
-    background-color: #fff;
-    border: 1px solid #777;
-    border-radius: 3px;
-    box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888;
-    cursor: pointer;
-    outline: none; }
-    main#home section button.see-all a {
-      color: #555;
-      text-decoration: none; }
-  main#home section button.see-all:active {
-    position: relative;
-    top: 1px; }
-main#home section#recent-projects {
-  width: 100%; }
-  main#home section#recent-projects div#slider-wrapper {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
-    main#home section#recent-projects div#slider-wrapper ul {
-      position: relative;
-      top: 0;
-      left: 0;
-      list-style: none; }
-      main#home section#recent-projects div#slider-wrapper ul li {
-        float: left; }
-        main#home section#recent-projects div#slider-wrapper ul li a {
-          position: relative; }
-          main#home section#recent-projects div#slider-wrapper ul li a img {
-            display: block; }
-          main#home section#recent-projects div#slider-wrapper ul li a h2, main#home section#recent-projects div#slider-wrapper ul li a p {
-            display: none; }
-    main#home section#recent-projects div#slider-wrapper button {
-      position: absolute;
-      top: 50%;
-      margin-top: -40px;
-      width: 45px;
-      height: 90px;
-      background-color: #333;
-      border: none;
-      opacity: 0.7;
-      cursor: pointer;
-      outline: none; }
-      main#home section#recent-projects div#slider-wrapper button i {
-        font-size: 60px;
-        color: #777; }
-    main#home section#recent-projects div#slider-wrapper button:hover {
-      opacity: 0.9; }
-    main#home section#recent-projects div#slider-wrapper button#slider-prev {
-      left: 0;
-      margin-left: -8px;
-      border-radius: 0 90px 90px 0; }
-    main#home section#recent-projects div#slider-wrapper button#slider-next {
-      right: 0;
-      margin-right: -8px;
-      border-radius: 90px 0 0 90px; }
-    main#home section#recent-projects div#slider-wrapper div#slider-info {
-      position: absolute;
-      bottom: 0;
-      padding: 20px;
-      width: calc(100% - 40px);
-      height: 55px;
-      background-color: #444;
-      opacity: 0.8; }
-      main#home section#recent-projects div#slider-wrapper div#slider-info h2, main#home section#recent-projects div#slider-wrapper div#slider-info p {
-        color: #fff; }
-      main#home section#recent-projects div#slider-wrapper div#slider-info h2 {
-        margin-bottom: 5px; }
-      main#home section#recent-projects div#slider-wrapper div#slider-info p {
-        font-size: 14px; }
-main#home section#students {
-  width: 100%; }
-  main#home section#students ul li {
-    display: inline-block;
-    margin-bottom: 20px;
-    width: calc(100% / 2 - 15px);
-    border: 1px solid #aaa;
-    border-radius: 3px;
-    box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
-    main#home section#students ul li img {
-      display: inline-block;
-      width: 20%;
-      vertical-align: top; }
-    main#home section#students ul li div.student-info {
-      display: inline-block;
-      padding: 20px; }
-      main#home section#students ul li div.student-info > a {
-        text-decoration: none;
-        color: #333; }
-        main#home section#students ul li div.student-info > a h2 {
-          margin-bottom: 5px;
-          font-size: 14px; }
-      main#home section#students ul li div.student-info > a:hover {
-        text-decoration: underline; }
-      main#home section#students ul li div.student-info h3 {
-        font-size: 13px; }
-        main#home section#students ul li div.student-info h3 a {
-          color: #333; }
-  main#home section#students ul li:nth-child(2n) {
-    margin-left: 20px; }
-  main#home section#students ul li:nth-child(3), main#home section#students ul li:nth-child(4) {
-    margin-bottom: 0; }
-main#home section#recent-wiki ul {
-  list-style: none; }
-  main#home section#recent-wiki ul li img {
-    display: inline-block;
-    width: 30%;
-    vertical-align: top; }
-  main#home section#recent-wiki ul li div.wiki-info {
-    position: relative;
-    padding: 0 20px 0 20px;
-    width: 65%;
-    display: inline-block; }
-    main#home section#recent-wiki ul li div.wiki-info h3.wiki-date {
-      font-size: 14px;
-      margin-bottom: 10px; }
-    main#home section#recent-wiki ul li div.wiki-info h3.wiki-author {
-      font-size: 14px;
-      font-weight: normal; }
-    main#home section#recent-wiki ul li div.wiki-info h4.wiki-tags {
-      font-weight: normal;
-      font-size: 14px; }
-    main#home section#recent-wiki ul li div.wiki-info p.wiki-content {
-      margin: 20px 0;
-      font-size: 14px; }
-main#home hr {
-  margin: 50px 0 30px 0;
-  height: 1px;
-  border: 0;
-  box-shadow: inset 0 6px 6px -6px #999; }
-
-/* Projects index */
-main#projects section#projects-list {
-  width: 100%; }
-  main#projects section#projects-list > h2 {
-    margin: 20px 0;
-    font-size: 25px; }
-  main#projects section#projects-list ul {
-    list-style: none; }
-    main#projects section#projects-list ul li {
-      display: inline-block;
-      margin-bottom: 20px;
-      width: calc(100% / 3 - 20px);
-      height: 450px;
-      vertical-align: top;
-      border: 1px solid #aaa;
-      border-radius: 3px;
-      box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
-      main#projects section#projects-list ul li a {
-        text-decoration: none; }
-        main#projects section#projects-list ul li a img {
-          width: 100%; }
-        main#projects section#projects-list ul li a div.project-info {
-          padding: 15px; }
-          main#projects section#projects-list ul li a div.project-info h2.project-title {
-            margin-bottom: 5px;
-            font-size: 16px; }
-          main#projects section#projects-list ul li a div.project-info p.project-overview {
-            font-size: 14px; }
-    main#projects section#projects-list ul li:nth-child(3n), main#projects section#projects-list ul li:nth-child(3n-1) {
-      margin-left: 20px; }
-
-/* People index */
-main#students section#students-list {
-  width: 100%; }
-  main#students section#students-list > h2 {
-    margin: 20px 0;
-    font-size: 25px; }
-  main#students section#students-list ul {
-    width: 100%;
-    list-style: none; }
-    main#students section#students-list ul li {
-      width: 100%;
-      margin-bottom: 20px;
-      border: 1px solid #aaa;
-      border-radius: 3px;
-      box-shadow: 6px 0px 7px -7px #888888, 0px 6px 7px -7px #888888; }
-      main#students section#students-list ul li img {
-        display: inline-block;
-        width: 15%;
-        vertical-align: top; }
-      main#students section#students-list ul li div.student-info {
-        display: inline-block;
-        padding: 15px;
-        width: 70%; }
-        main#students section#students-list ul li div.student-info h2.student-name {
-          font-size: 16px; }
-        main#students section#students-list ul li div.student-info h3.student-focuses {
-          font-size: 14px; }
-        main#students section#students-list ul li div.student-info h3.student-website {
-          font-size: 14px; }
-          main#students section#students-list ul li div.student-info h3.student-website a {
-            color: #333; }
-        main#students section#students-list ul li div.student-info p.student-summary {
-          margin: 8px 0;
-          font-size: 14px; }
-
-/* Wiki index */
-main#wiki section#wikis-list {
-  width: 100%; }
-  main#wiki section#wikis-list > h2 {
-    margin: 20px 0;
-    font-size: 25px; }
-  main#wiki section#wikis-list ul {
-    width: 100%;
-    list-style: none; }
-    main#wiki section#wikis-list ul li a {
-      text-decoration: none;
-      color: #3c7fff; }
-
-/* Posts */
-main.project article {
-  width: 100%; }
-  main.project article section.project-header {
-    margin: 20px 0;
-    width: 100%;
-    overflow: auto; }
-    main.project article section.project-header img.project-image {
-      float: right;
-      width: 30%;
-      vertical-align: top; }
-    main.project article section.project-header div.project-header-info {
-      display: inline-block;
-      width: 65%; }
-      main.project article section.project-header div.project-header-info h1.project-title {
-        margin: 0 !important;
-        font-size: 29px; }
-      main.project article section.project-header div.project-header-info h2.project-author, main.project article section.project-header div.project-header-info h2.project-date {
-        font-size: 14px; }
-      main.project article section.project-header div.project-header-info h2.project-date {
-        margin-bottom: 20px; }
-      main.project article section.project-header div.project-header-info a.project-demo {
-        margin-top: 20px;
-        padding: 10px;
-        line-height: 24px;
-        text-decoration: none;
-        background-color: #60b044;
-        background-image: mox-linear-gradient(#8add6d, #60b044);
-        background-image: linear-gradient(#8add6d, #60b044);
-        background-repeat: repeat-x;
-        border: 1px solid #5ca941;
-        border-radius: 3px;
-        color: #ffffff; }
-        main.project article section.project-header div.project-header-info a.project-demo i {
-          font-size: 25px; }
-    main.project article section.project-header div.project-requirements {
-      margin: 40px 0;
-      padding: 15px;
-      width: 50%;
-      background-color: #bbceee;
-      border: 1px solid #9daab8;
-      border-radius: 3px; }
-      main.project article section.project-header div.project-requirements h2 {
-        margin-bottom: 10px; }
-      main.project article section.project-header div.project-requirements ul {
-        padding-left: 35px; }
-  main.project article section.project-overview {
-    margin: 30px 0;
-    width: 100%; }
-    main.project article section.project-overview h2 {
-      font-size: 30px; }
-  main.project article section.project-instructions {
-    margin: 30px 0; }
-    main.project article section.project-instructions h2 {
-      font-size: 30px; }
-    main.project article section.project-instructions ol {
-      padding-left: 35px; }
-      main.project article section.project-instructions ol li {
-        margin: 8px 0; }
-        main.project article section.project-instructions ol li code {
-          display: block;
-          margin-top: 5px;
-          padding: 9px 10px;
-          background-color: #f3f57;
-          border: 1px solid #aebdcc;
-          border-radius: 3px;
-          font-family: Courier; }
-  main.project article section.project-starts {
-    margin: 30px 0; }
-    main.project article section.project-starts h2 {
-      font-size: 30px; }
-    main.project article section.project-starts ul {
-      padding-left: 35px;
-      list-style: none; }
-      main.project article section.project-starts ul li a {
-        color: #426dff;
-        text-decoration: none; }
-
-/* Footer */
-footer {
-  width: 100%;
-  background-color: #31043F; }
-  footer ul {
-    margin: 0 auto;
-    padding: 15px 0;
-    width: 65%;
-    list-style: none;
-    text-align: center; }
-    footer ul li {
-      padding: 0 5px;
-      display: inline-block;
-      color: #fff;
-      font-size: 14px;
-      border-right: 1px solid #5b3b64; }
-    footer ul li:last-child {
-      border: none; }
+/*# sourceMappingURL=style.css.map */

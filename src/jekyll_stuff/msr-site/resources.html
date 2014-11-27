@@ -1,0 +1,47 @@
+---
+layout: default
+title: Resources
+---
+
+<main id="resources">
+
+	<section id="tags-list">
+		<h2>Filter By Tag</h2>
+		<ul>
+			{% for tag in site.collections.resources.tags %}
+				<li>{{ tag | downcase }}</li>
+			{% endfor %}
+		</ul>
+	</section>
+
+	<section id="resources-search">
+		<h2>Resources</h2>
+		<form onsubmit="return false;">
+			<input id="search-bar" type="text" placeholder="Search by title or content">
+			<button id="search-submit" class="search-button" type="submit">Search</button>
+		</form>
+	</section>
+
+	<section id="resources-list">
+		<ul>
+			{% for resource in site.resources %}
+				<li>
+					<a href="{{ site.baseurl }}{{ resource.url }}">
+						<h2 class="resource-date">{{ resource.date }}</h2>
+						<h1 class="resource-title">{{ resource.title }}</h1>
+						<span>Tags:</span>
+						<ul class="resource-tags-list">
+							{% for tag in resource.tags %}
+								<li class="resource-tag">{{ tag }}</li>
+							{% endfor %}
+						</ul>
+						<div class="resource-content">
+							{{ resource.content }}
+						</div>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+
+</main>

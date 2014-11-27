@@ -26,7 +26,7 @@ $  ./vrep.sh
 ```
 Move the executable in this repository to the v-rep directory
 ```
-$  mv /path/to/this/repository/vrep_baxter_test.py /path/to/vrep/directory/
+$  ln -s /path/to/this/repository/vrep_baxter_test.py /path/to/vrep/directory/vrep_baxter_test.py
 ```
 In the v-rep window that should now be open, in the toolbar at the top, select
 ```

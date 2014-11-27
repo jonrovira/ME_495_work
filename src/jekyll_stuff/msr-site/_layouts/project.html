@@ -30,48 +30,17 @@
 								{% endfor %}
 							</ul>
 						</div>
-					<section>
+					</section>
 
 					<section class="project-overview">
 						<h2>Overview</h2>
 						<p>{{ page.overview }}</p>
 					</section>
 
-					<section class="project-instructions">
-						<h2>Get the demo up and running</h2>
-						<ol>
-							{% for step in page.demo-instructions %}
-								{% if step[1] %}
-									<li>
-										{{ step[0] }}
-										<code>{{ step[1] }}</code>
-									</li>
-								{% else %}
-									<li>
-										{{ step }}
-									</li>
-								{% endif %}
+					<section class="project-content">
+						
+						{{ content }}
 
-							{% endfor %}
-						</ol>
-					</section>
-
-					<section class="project-starts">
-						<h2>Great places to start</h2>
-						<ul>
-							{% for place in page.places-to-start %}
-								{% if place[1] %}
-									<li>
-										<a href="{{ place[1] }}">{{ place[0] }}</a>
-									</li>
-								{% else %}
-									<li>
-										{{ place }}
-									</li>
-								{% endif %}
-
-							{% endfor %}
-						</ul>
 					</section>
 
 				</article>

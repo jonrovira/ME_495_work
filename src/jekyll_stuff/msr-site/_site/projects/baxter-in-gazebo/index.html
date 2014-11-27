@@ -5,13 +5,14 @@
 
 	<title>ME 495 - Embedded Systems in Robotics</title>
 
-	<link rel="icon" type="image/png" href="/msr-site/public/images/nu-logo.png">
+	<link rel="icon" type="image/png" href="/msr-site/public/images/favicon.png">
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/msr-site/public/stylesheets/style.css">
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="/msr-site/public/javascripts/script.js"></script>
+	
 </head>
 
 	<body>
@@ -30,8 +31,32 @@
 		<ul>
 			<li><a href="/msr-site/">HOME</a></li>
 			<li><a href="/msr-site/projects/">PROJECTS</a></li>
-			<li><a href="/msr-site/students/">STUDENTS</a></li>
-			<li><a href="/msr-site/wiki/">WIKI</a></li>
+			<li>
+				<a href="/msr-site/students/">STUDENTS</a>
+				<ul>
+					<li>
+						<a href="/msr-site/students/?class_year=all">All</a>
+					</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2011">2011</a>
+						</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2012">2012</a>
+						</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2013">2013</a>
+						</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2014">2014</a>
+						</li>
+					
+				</ul>
+			</li>
+			<li><a href="/msr-site/resources/">RESOURCES</a></li>
 		</ul>
 	</nav>
 </header>
@@ -78,63 +103,25 @@
 								
 							</ul>
 						</div>
-					<section>
+					</section>
 
 					<section class="project-overview">
 						<h2>Overview</h2>
 						<p>Learn how to quickly get a Baxter simulation running in Gazebo. Execute the joint position keyboard example in the simulation.</p>
 					</section>
 
-					<section class="project-instructions">
-						<h2>Get the demo up and running</h2>
-						<ol>
-							
-								
-									<li>
-										Complete the simulator installation instructions located at sdk.rethinkrobotics.com/wiki/Simulator_Installation
-									</li>
-								
+					<section class="project-content">
+						
+						<h3 id="topic-1">Topic 1</h3>
+<p>Lorem ipsum dolor sit amet, te rebum nonumes sapientem sit. Ex per tempor dicunt. Te electram intellegat mel. Mei odio utinam interpretaris at, ex pro facilisis maluisset philosophia, his id nibh numquam adipiscing. Ne duo persius omittam explicari, decore euripidis eloquentiam an sit, vis eu graeci causae vocibus. Sit tantas vocibus pertinax ei, est ferri disputationi et, cum eu omnesque fabellas. Partem option expetendis te eum, at sint regione salutatus mei.</p>
 
-							
-								
-									<li>
-										Run the Baxter setup script located in the root of your workspace with the simulation parameter
-										<code>$ ./baxter.sh sim</code>
-									</li>
-								
+<h3 id="topic-2">Topic 2</h3>
+<p>Ferri detraxit voluptatibus ius te, possit nostrum mnesarchum et mei, sed eu erant phaedrum reformidans. Id per dicant dolore docendi, nam eu ullum zril offendit, posse accumsan qui ex. Id fugit tollit pertinacia nam. Ex illud maiestatis incorrupte mea. Eu cum sensibus necessitatibus, ad partem dictas mel, est ut justo graeci consetetur.</p>
 
-							
-								
-									<li>
-										Start the simulation with controllers
-										<code>$ roslaunch baxter_gazebo baxter_world.launch</code>
-									</li>
-								
+<h3 id="topic-3">Topic 3</h3>
+<p>Eam et duis reque dicam, mei recteque posidonium ex. Est hinc ignota nemore te, nullam nonumes referrentur est cu. An mea autem iriure apeirian, ad vim malis semper expetendis. Habemus repudiare ut vis, et invidunt signiferumque qui. An eos nisl magna veniam, periculis consulatu reformidans mea no. Eu aperiam prompta elaboraret his, quis discere cu usu, cu vix impetus accumsan.</p>
 
-							
-								
-									<li>
-										In a new terminal, run the joint position keyboard example
-										<code>$ rosrun baxter_examples joint_position_keyboard.py</code>
-									</li>
-								
 
-							
-						</ol>
-					</section>
-
-					<section class="project-starts">
-						<h2>Great places to start</h2>
-						<ul>
-							
-								
-									<li>
-										<a href="http://sdk.rethinkrobotics.com//wiki/Simulator_Installation">Baxter Simulation Installation</a>
-									</li>
-								
-
-							
-						</ul>
 					</section>
 
 				</article>

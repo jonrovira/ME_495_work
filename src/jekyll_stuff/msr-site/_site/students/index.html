@@ -5,13 +5,14 @@
 
 	<title>ME 495 - Embedded Systems in Robotics</title>
 
-	<link rel="icon" type="image/png" href="/msr-site/public/images/nu-logo.png">
+	<link rel="icon" type="image/png" href="/msr-site/public/images/favicon.png">
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/msr-site/public/stylesheets/style.css">
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="/msr-site/public/javascripts/script.js"></script>
+	
 </head>
 
 	<body>
@@ -30,52 +31,106 @@
 		<ul>
 			<li><a href="/msr-site/">HOME</a></li>
 			<li><a href="/msr-site/projects/">PROJECTS</a></li>
-			<li><a href="/msr-site/students/">STUDENTS</a></li>
-			<li><a href="/msr-site/wiki/">WIKI</a></li>
+			<li>
+				<a href="/msr-site/students/">STUDENTS</a>
+				<ul>
+					<li>
+						<a href="/msr-site/students/?class_year=all">All</a>
+					</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2011">2011</a>
+						</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2012">2012</a>
+						</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2013">2013</a>
+						</li>
+					
+						<li>
+							<a href="/msr-site/students/?class_year=2014">2014</a>
+						</li>
+					
+				</ul>
+			</li>
+			<li><a href="/msr-site/resources/">RESOURCES</a></li>
 		</ul>
 	</nav>
 </header>
 
 			<main id="students">
 
-	<section id="students-list">
+	<section id="class-select">
 		<h2>Students</h2>
+		<h3>Class year</h3>
+		<ul id="class-select-list">
+			<li>
+				<button value="all">All</button>
+			</li>
+			
+				<li>
+					<button value="2011">2011</button>
+				</li>
+			
+				<li>
+					<button value="2012">2012</button>
+				</li>
+			
+				<li>
+					<button value="2013">2013</button>
+				</li>
+			
+				<li>
+					<button value="2014">2014</button>
+				</li>
+			
+		</ul>
+	</section>
+
+	<section id="students-list">
 		<ul>
 			
-				<li id="Jarvis-Schultz">
-					<img src="http://unsplash.it/500?random">
-					<div class="student-info">
-						<h2 class="student-name">Jarvis Schultz</h2>
-						<h3 class="student-focuses">Focuses: neuroscience, robotics</h3>
-						<h3 class="student-website">Website: <a href="http://google.com">http://google.com</a></h3>
-						<p class="student-summary">Lorem ipsum dolor sit amet, an qui referrentur efficiantur. At purto audiam vel, te quod appellantur mei. Vel dolorem luptatum eu, persius dolorum delicatissimi et pri. Vidit option ei duo, soleat laoreet legendos sit ex. Eam et velit debet, nam facer perpetua quaerendum id, possim invenire oportere et vix. Pri ea putent honestatis, ei alii pericula eam. In eius tamquam vim, harum congue vel in.</p>
-					</div>
-				</li>
-			
-				<li id="Jon-Rovira">
-					<img src="http://unsplash.it/500?random">
-					<div class="student-info">
-						<h2 class="student-name">Jon Rovira</h2>
-						<h3 class="student-focuses">Focuses: neuroscience, robotics</h3>
-						<h3 class="student-website">Website: <a href="http://google.com">http://google.com</a></h3>
-						<p class="student-summary">Lorem ipsum dolor sit amet, an qui referrentur efficiantur. At purto audiam vel, te quod appellantur mei. Vel dolorem luptatum eu, persius dolorum delicatissimi et pri. Vidit option ei duo, soleat laoreet legendos sit ex. Eam et velit debet, nam facer perpetua quaerendum id, possim invenire oportere et vix. Pri ea putent honestatis, ei alii pericula eam. In eius tamquam vim, harum congue vel in.</p>
-					</div>
-				</li>
-			
-				<li id="Kevin-Lynch">
-					<img src="http://unsplash.it/500?random">
-					<div class="student-info">
-						<h2 class="student-name">Kevin Lynch</h2>
-						<h3 class="student-focuses">Focuses: neuroscience, robotics</h3>
-						<h3 class="student-website">Website: <a href="http://google.com">http://google.com</a></h3>
-						<p class="student-summary">Lorem ipsum dolor sit amet, an qui referrentur efficiantur. At purto audiam vel, te quod appellantur mei. Vel dolorem luptatum eu, persius dolorum delicatissimi et pri. Vidit option ei duo, soleat laoreet legendos sit ex. Eam et velit debet, nam facer perpetua quaerendum id, possim invenire oportere et vix. Pri ea putent honestatis, ei alii pericula eam. In eius tamquam vim, harum congue vel in.</p>
-					</div>
-				</li>
-			
-				<li id="Todd-Murphey">
+				<li id="Todd-Murphey" class="class-year-2011">
 					<img src="http://unsplash.it/500?random">
 					<div class="student-info">
 						<h2 class="student-name">Todd Murphey</h2>
+						<h3 class="student-year">Class of 2011</h3>
+						<h3 class="student-focuses">Focuses: neuroscience, robotics</h3>
+						<h3 class="student-website">Website: <a href="http://google.com">http://google.com</a></h3>
+						<p class="student-summary">Lorem ipsum dolor sit amet, an qui referrentur efficiantur. At purto audiam vel, te quod appellantur mei. Vel dolorem luptatum eu, persius dolorum delicatissimi et pri. Vidit option ei duo, soleat laoreet legendos sit ex. Eam et velit debet, nam facer perpetua quaerendum id, possim invenire oportere et vix. Pri ea putent honestatis, ei alii pericula eam. In eius tamquam vim, harum congue vel in.</p>
+					</div>
+				</li>
+			
+				<li id="Jarvis-Schultz" class="class-year-2012">
+					<img src="http://unsplash.it/500?random">
+					<div class="student-info">
+						<h2 class="student-name">Jarvis Schultz</h2>
+						<h3 class="student-year">Class of 2012</h3>
+						<h3 class="student-focuses">Focuses: neuroscience, robotics</h3>
+						<h3 class="student-website">Website: <a href="http://google.com">http://google.com</a></h3>
+						<p class="student-summary">Lorem ipsum dolor sit amet, an qui referrentur efficiantur. At purto audiam vel, te quod appellantur mei. Vel dolorem luptatum eu, persius dolorum delicatissimi et pri. Vidit option ei duo, soleat laoreet legendos sit ex. Eam et velit debet, nam facer perpetua quaerendum id, possim invenire oportere et vix. Pri ea putent honestatis, ei alii pericula eam. In eius tamquam vim, harum congue vel in.</p>
+					</div>
+				</li>
+			
+				<li id="Jon-Rovira" class="class-year-2013">
+					<img src="http://unsplash.it/500?random">
+					<div class="student-info">
+						<h2 class="student-name">Jon Rovira</h2>
+						<h3 class="student-year">Class of 2013</h3>
+						<h3 class="student-focuses">Focuses: neuroscience, robotics</h3>
+						<h3 class="student-website">Website: <a href="http://google.com">http://google.com</a></h3>
+						<p class="student-summary">Lorem ipsum dolor sit amet, an qui referrentur efficiantur. At purto audiam vel, te quod appellantur mei. Vel dolorem luptatum eu, persius dolorum delicatissimi et pri. Vidit option ei duo, soleat laoreet legendos sit ex. Eam et velit debet, nam facer perpetua quaerendum id, possim invenire oportere et vix. Pri ea putent honestatis, ei alii pericula eam. In eius tamquam vim, harum congue vel in.</p>
+					</div>
+				</li>
+			
+				<li id="Kevin-Lynch" class="class-year-2014">
+					<img src="http://unsplash.it/500?random">
+					<div class="student-info">
+						<h2 class="student-name">Kevin Lynch</h2>
+						<h3 class="student-year">Class of 2014</h3>
 						<h3 class="student-focuses">Focuses: neuroscience, robotics</h3>
 						<h3 class="student-website">Website: <a href="http://google.com">http://google.com</a></h3>
 						<p class="student-summary">Lorem ipsum dolor sit amet, an qui referrentur efficiantur. At purto audiam vel, te quod appellantur mei. Vel dolorem luptatum eu, persius dolorum delicatissimi et pri. Vidit option ei duo, soleat laoreet legendos sit ex. Eam et velit debet, nam facer perpetua quaerendum id, possim invenire oportere et vix. Pri ea putent honestatis, ei alii pericula eam. In eius tamquam vim, harum congue vel in.</p>

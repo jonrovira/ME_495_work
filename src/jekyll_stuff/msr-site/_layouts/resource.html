@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+
+	<body>
+
+		<div id="wrapper">
+
+			{% include header.html %}
+
+			<main class="resource">
+
+				<h1 class="resource-title">{{ page.title }}</h1>
+				<h2 class="resource-author">Written by {{ page.author }}</h2>
+				<h3 class="resource-date">{{ page.date }}</h3>
+				<h4 class="resource-tags">Tags: {{ page.tags }}</h4>
+				{{ content }}
+
+			</main>
+
+			{% include footer.html %}
+
+		</div>
+
+	</body>
+</html>
